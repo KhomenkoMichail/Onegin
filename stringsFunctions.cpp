@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <TXLib.h>
 #include <assert.h>
 
 #include "stringsFunctions.h"
 
 int myPuts(const char* str) {
-    assert (str != NULL)
+    assert (str != NULL);
 
     int returnableValue = 0;
     for (int i = 0; str[i] != '\0'; i++)
@@ -12,7 +14,7 @@ int myPuts(const char* str) {
     return returnableValue;
 }
 
-char *myStrchr (const char* str, int c) {
+const char* myStrchr (const char* str, int c) {
     assert(str != NULL);
 
     const char* symbolAddress = NULL;
@@ -32,11 +34,12 @@ size_t myStrlen (const char* str) {
     return lengthOfString;
 }
 
-char* myStrcat (char* restrict strl, const char* restrict str2) {
+char* myStrcat (char* str1, const char* str2) {
     assert(str1 != NULL);
     assert(str2 != NULL);
 
-    for (int i = 0; str1[i] != '\0'; i++)
+    int i = 0;
+    for (i = 0; str1[i] != '\0'; i++)
         continue;
 
     for (int j = 0; 1; j++, i++) {
@@ -47,15 +50,16 @@ char* myStrcat (char* restrict strl, const char* restrict str2) {
     return str1;
 }
 
-char* myStrncat(char* restrict strl, const char* restrict str2, size_t n) {
+char* myStrncat(char* str1, const char* str2, size_t n) {
     assert(str1 != NULL);
     assert(str2 != NULL);
 
-    for (int i = 0; str1[i] != '\0'; i++)
+    int i = 0;
+    for (i = 0; str1[i] != '\0'; i++)
         continue;
 
-    for (int j = 0; j < n; j++, i++) {
-        str1[i] = str[j];
+    for (unsigned int j = 0; j < n; j++, i++) {
+        str1[i] = str2[j];
         if(str2[j] == '\0')
             break;
     }
@@ -71,12 +75,12 @@ int myAtoi(const char* str) {
     return num;
 }
 
-char* myFgets (char* restrict str, int stringSize, FILE* restrict file) {
+char* myFgets (char* str, int stringSize, FILE* file) {
     assert(str != NULL);
     assert(file != NULL);
 
-    for (int i = 0; i <= stringSize; i++) {
-        str[i] = fgetc(file);
+    for (int i = 0; i <=  stringSize; i++) {
+        str[i] = (char)fgetc(file);
         if (str[i] == EOF) {
             str[i] = '\0';
             break;
@@ -103,30 +107,30 @@ char* myStrdup(const char* str) {
 
 ssize_t myGetline(char** lineptr, size_t* n, FILE* file) {
     assert(n != NULL);
-    assert(FILE != NULL);
+    assert(file != NULL);
 
-    int lengthOfString = 0;
+    unsigned int lengthOfString = 0;
     char* lengthFindingString = 0;
 
     if (*lineptr == NULL)
-        *lineptr = calloc(n, sizeof(char));
+        *lineptr = (char* )calloc(*n, sizeof(char));
 
     for (int i = 0; lengthFindingString[i] != '\0'; i++)
         lengthOfString++;
-    if ( (lengthOfFle + 1) > *n) {
-        *n = lengthOfFile + 1;
+    if ( (lengthOfString + 1) > *n) {
+        *n = lengthOfString + 1;
         realloc( *lineptr, *n);
     }
 
     for (int i = 0; ; i++) {
-        **lineptr[i] = fgetc(file);
-        if (lineptr[i] == '\0')
+        *lineptr[i] = (char)fgetc(file);
+        if (*lineptr[i] == '\0')
             break;
-        if (lineptr[i] == '\n') {
-            lineptr[i+1] = '\0';
+        if (*lineptr[i] == '\n') {
+            *lineptr[i+1] = '\0';
             break;
         }
-        if (lineptr[i] == EOF)
+        if (*lineptr[i] == EOF)
             return -1;
     }
     return lengthOfString;

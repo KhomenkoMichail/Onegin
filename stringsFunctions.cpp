@@ -14,13 +14,13 @@ int myPuts(const char* str) {
     return returnableValue;
 }
 
-const char* myStrchr (const char* str, int c) {
+const char* myStrchr (const char* str, int searchedSymbol) {
     assert(str != NULL);
 
     const char* symbolAddress = NULL;
     for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] == c)
-            symbolAddress = &str[i];
+        if (str[i] == searchedSymbol)
+            symbolAddress = str + i;
     }
     return symbolAddress;
 }
@@ -34,44 +34,50 @@ size_t myStrlen (const char* str) {
     return lengthOfString;
 }
 
-char* myStrcat (char* str1, const char* str2) {
-    assert(str1 != NULL);
-    assert(str2 != NULL);
+char* myStrcat (char* changedString, const char* addedString) {
+    assert(changedString != NULL);
+    assert(addedString != NULL);
 
-    int i = 0;
-    for (i = 0; str1[i] != '\0'; i++)
+    size_t lengthOfFirst = 0;
+    size_t lengthOfSecond = 0;
+
+    for ( ; changedString[lengthOfFirst] != '\0'; lengthOfFirst++)
         continue;
 
-    for (int j = 0; 1; j++, i++) {
-        str1[i] = str2[j];
-        if(str2[j] == '\0')
+    for ( ; 1; lengthOfSecond++) {
+        changedString[lengthOfFirst + lengthOfSecond] = addedString[lengthOfSecond];
+        if(addedString[lengthOfSecond] == '\0')
             break;
     }
-    return str1;
+    changedString[lengthOfFirst + lengthOfSecond + 1] = '\0';
+    return changedString;
 }
 
-char* myStrncat(char* str1, const char* str2, size_t n) {
-    assert(str1 != NULL);
-    assert(str2 != NULL);
+char* myStrncat(char* changedString, const char* addedString, size_t n) {
+    assert(changedString != NULL);
+    assert(addedString != NULL);
 
-    int i = 0;
-    for (i = 0; str1[i] != '\0'; i++)
+    size_t lengthOfFirst = 0;
+    size_t lengthOfSecond = 0;
+
+    for ( ; changedString[lengthOfFirst] != '\0'; lengthOfFirst++)
         continue;
 
-    for (unsigned int j = 0; j < n; j++, i++) {
-        str1[i] = str2[j];
-        if(str2[j] == '\0')
+    for (; lengthOfSecond < n; lengthOfSecond++) {
+        changedString[lengthOfFirst + lengthOfSecond] = addedString[lengthOfSecond];
+        if(addedString[lengthOfSecond] == '\0')
             break;
     }
-    return str1;
+    changedString[n-1] = '\0';
+    return changedString;
 }
 
 int myAtoi(const char* str) {
     assert(str != NULL);
 
     int num = 0;
-    for (int i = 0; (str[i] > 47) && (str[i] < 58); i++)
-        num = num*10 + (str[i] - 48);
+    for (int i = 0; (str[i] >= '0') && (str[i] <= '9'); i++)
+        num = num*10 + (str[i] - '0');
     return num;
 }
 
@@ -94,10 +100,14 @@ char* myFgets (char* str, int stringSize, FILE* file) {
 }
 
 char* myStrdup(const char* str) {
-    int lengthOfStr = 0;
+    assert(str != NULL);
+
+    size_t lengthOfStr = 0;
+
     for(int i = 0; str[i] != '\0'; i++)
         lengthOfStr++;
     char* newStr = (char* )calloc( (lengthOfStr+1), sizeof(char));
+
     for (int n = 0; str[n] != '\0'; n++)
         newStr[n] = str[n];
     newStr[lengthOfStr+1] = '\0';
@@ -109,31 +119,32 @@ ssize_t myGetline(char** lineptr, size_t* n, FILE* file) {
     assert(n != NULL);
     assert(file != NULL);
 
-    unsigned int lengthOfString = 0;
-    char* lengthFindingString = 0;
+    const size_t extraMemory = 20;
+    size_t charactersCount = 0;
 
     if (*lineptr == NULL)
         *lineptr = (char* )calloc(*n, sizeof(char));
 
-    for (int i = 0; lengthFindingString[i] != '\0'; i++)
-        lengthOfString++;
-    if ( (lengthOfString + 1) > *n) {
-        *n = lengthOfString + 1;
-        realloc( *lineptr, *n);
-    }
+    for (; ; charactersCount++) {
+        if (charactersCount == *n) {
+            *n += extraMemory;
+            *lineptr = (char*)realloc(*lineptr, *n);
+        }
 
-    for (int i = 0; ; i++) {
-        *lineptr[i] = (char)fgetc(file);
-        if (*lineptr[i] == '\0')
+        if ((*lineptr)[charactersCount] == EOF)
+            return -1;
+
+        (*lineptr)[charactersCount] = (char)fgetc(file);
+
+        if ((*lineptr)[charactersCount] == '\0')
             break;
-        if (*lineptr[i] == '\n') {
-            *lineptr[i+1] = '\0';
+
+        if ((*lineptr)[charactersCount] == '\n') {
+            (*lineptr)[charactersCount+1] = '\0';
             break;
         }
-        if (*lineptr[i] == EOF)
-            return -1;
     }
-    return lengthOfString;
+    return charactersCount;
 }
 
 

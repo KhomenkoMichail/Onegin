@@ -3,13 +3,13 @@
 
 int myPuts(const char* str);
 
-const char* myStrchr (const char* str, int c);
+const char* myStrchr (const char* str, int searchedSymbol);
 
 size_t myStrlen (const char* str);
 
-char* myStrcat (char* str1, const char* str2);
+char* myStrcat (char* changedString, const char* addedString);
 
-char* myStrncat(char* str1, const char* str2, size_t n);
+char* myStrncat(char* changedString, const char* addedString, size_t n);
 
 int myAtoi(const char* str);
 

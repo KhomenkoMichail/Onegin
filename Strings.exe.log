@@ -1,0 +1,1372 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DE71 в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 135. Попытка записать данные по адресу 0x59587010 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x5B00 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DE71 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:135:
+
+    133:             break;
+    134:         if (*lineptr[i] == '\n') {
+=>  135:             *lineptr[i+1] = '\0';
+    136:             break;
+    137:         }
+
+# 1 0x0045B6CE in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  7 2025 23:31:47, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 07 2025 23:38:40
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DE71 в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 135. Попытка записать данные по адресу 0x59587010 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x5B00 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DE71 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:135:
+
+    133:             break;
+    134:         if (*lineptr[i] == '\n') {
+=>  135:             *lineptr[i+1] = '\0';
+    136:             break;
+    137:         }
+
+# 1 0x0045B6CE in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  7 2025 23:31:47, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 07 2025 23:38:40
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDB9 в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 120. Попытка записать данные по адресу 0x59586FD0 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x3B8C (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDB9 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:120:
+
+    118:     fseek(file, 0L, SEEK_SET);
+    119:     for (int i = 0; ; i++) {
+=>  120:         *lineptr[i] = (char)fgetc(file);
+    121:         if (*lineptr[i] == '\0')
+    122:             break;
+
+# 1 0x0045B686 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  7 2025 23:31:47, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 07 2025 23:59:11
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDB9 в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 120. Попытка записать данные по адресу 0x59586FD0 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x3B8C (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDB9 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:120:
+
+    118:     fseek(file, 0L, SEEK_SET);
+    119:     for (int i = 0; ; i++) {
+=>  120:         *lineptr[i] = (char)fgetc(file);
+    121:         if (*lineptr[i] == '\0')
+    122:             break;
+
+# 1 0x0045B686 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  7 2025 23:31:47, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 07 2025 23:59:11
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDB9 в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 120. Попытка записать данные по адресу 0x59586FD0 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x2A88 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDB9 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:120:
+
+    118:     fseek(file, 0L, SEEK_SET);
+    119:     for (int i = 0; ; i++) {
+=>  120:         *lineptr[i] = (char)fgetc(file);
+    121:         if (*lineptr[i] == '\0')
+    122:             break;
+
+# 1 0x0045B686 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  7 2025 23:31:47, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 00:03:01
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDB9 в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 120. Попытка записать данные по адресу 0x59586FD0 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x2A88 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDB9 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:120:
+
+    118:     fseek(file, 0L, SEEK_SET);
+    119:     for (int i = 0; ; i++) {
+=>  120:         *lineptr[i] = (char)fgetc(file);
+    121:         if (*lineptr[i] == '\0')
+    122:             break;
+
+# 1 0x0045B686 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  7 2025 23:31:47, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 00:03:01
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DD9E в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 119. Попытка записать данные по адресу 0x59586F90 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x34DC (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DD9E in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:119:
+
+    117: 
+    118:     for (int i = 0; ; i++) {
+=>  119:         *lineptr[i] = (char)fgetc(file);
+    120:         if (*lineptr[i] == '\0')
+    121:             break;
+
+# 1 0x0045B646 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 00:05:08, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 00:05:15
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DD9E в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 119. Попытка записать данные по адресу 0x59586F90 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x34DC (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DD9E in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:119:
+
+    117: 
+    118:     for (int i = 0; ; i++) {
+=>  119:         *lineptr[i] = (char)fgetc(file);
+    120:         if (*lineptr[i] == '\0')
+    121:             break;
+
+# 1 0x0045B646 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 00:05:08, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 00:05:15
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DD9E в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 119. Попытка записать данные по адресу 0x59316FB0 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x5B38 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DD9E in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:119:
+
+    117: 
+    118:     for (int i = 0; ; i++) {
+=>  119:         *lineptr[i] = (char)fgetc(file);
+    120:         if (*lineptr[i] == '\0')
+    121:             break;
+
+# 1 0x0045B66A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 00:06:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 00:06:52
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DD9E в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 119. Попытка записать данные по адресу 0x59316FB0 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x5B38 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DD9E in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:119:
+
+    117: 
+    118:     for (int i = 0; ; i++) {
+=>  119:         *lineptr[i] = (char)fgetc(file);
+    120:         if (*lineptr[i] == '\0')
+    121:             break;
+
+# 1 0x0045B66A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 00:06:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 00:06:52
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDAD в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 122. Попытка записать данные по адресу 0x59657010 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x4278 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDAD in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:122:
+
+    120: 
+    121:     for (int i = 0; ; i++) {
+=>  122:         *lineptr[i] = (char)fgetc(file);
+    123:         if (*lineptr[i] == '\0')
+    124:             break;
+
+# 1 0x0045B6D5 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 17:36:43, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 17:36:48
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDAD в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 122. Попытка записать данные по адресу 0x59657010 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x4278 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDAD in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:122:
+
+    120: 
+    121:     for (int i = 0; ; i++) {
+=>  122:         *lineptr[i] = (char)fgetc(file);
+    123:         if (*lineptr[i] == '\0')
+    124:             break;
+
+# 1 0x0045B6D5 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 17:36:43, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 17:36:48
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDAD в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 122. Попытка записать данные по адресу 0x59587010 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x4368 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDAD in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:122:
+
+    120: 
+    121:     for (int i = 0; ; i++) {
+=>  122:         *lineptr[i] = (char)fgetc(file);
+    123:         if (*lineptr[i] == '\0')
+    124:             break;
+
+# 1 0x0045B6D5 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:46:
+
+     44: 
+     45: 
+=>   46:     myGetline(&str3, &n, stdin);
+     47:     myPuts(str3);
+     48:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 17:51:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 17:51:12
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDAD в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 122. Попытка записать данные по адресу 0x59587010 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x4368 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDAD in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:122:
+
+    120: 
+    121:     for (int i = 0; ; i++) {
+=>  122:         *lineptr[i] = (char)fgetc(file);
+    123:         if (*lineptr[i] == '\0')
+    124:             break;
+
+# 1 0x0045B6D5 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:46:
+
+     44: 
+     45: 
+=>   46:     myGetline(&str3, &n, stdin);
+     47:     myPuts(str3);
+     48:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 17:51:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 17:51:12
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDA4 в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 121. Попытка записать данные по адресу 0x59587010 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x1F40 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDA4 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:121:
+
+    119: 
+    120:     for (int i = 0; ; i++) {
+=>  121:         *lineptr[i] = (char)fgetc(file);
+    122:         if (*lineptr[i] == '\0')
+    123:             break;
+
+# 1 0x0045B6DD in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:46:
+
+     44: 
+     45: 
+=>   46:     myGetline(&str3, &n, stdin);
+     47:     myPuts(str3);
+     48:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 22:17:42, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 22:17:49
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDA4 в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 121. Попытка записать данные по адресу 0x59587010 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x1F40 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDA4 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:121:
+
+    119: 
+    120:     for (int i = 0; ; i++) {
+=>  121:         *lineptr[i] = (char)fgetc(file);
+    122:         if (*lineptr[i] == '\0')
+    123:             break;
+
+# 1 0x0045B6DD in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:46:
+
+     44: 
+     45: 
+=>   46:     myGetline(&str3, &n, stdin);
+     47:     myPuts(str3);
+     48:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 22:17:42, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 22:17:49
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDA4 в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 121. Попытка записать данные по адресу 0x59587010 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x6148 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDA4 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:121:
+
+    119: 
+    120:     for (int i = 0; ; i++) {
+=>  121:         *lineptr[i] = (char)fgetc(file);
+    122:         if (*lineptr[i] == '\0')
+    123:             break;
+
+# 1 0x0045B6DD in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:46:
+
+     44: 
+     45: 
+=>   46:     myGetline(&str3, &n, stdin);
+     47:     myPuts(str3);
+     48:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 22:18:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 22:18:49
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDA4 в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 121. Попытка записать данные по адресу 0x59587010 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x6148 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDA4 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:121:
+
+    119: 
+    120:     for (int i = 0; ; i++) {
+=>  121:         *lineptr[i] = (char)fgetc(file);
+    122:         if (*lineptr[i] == '\0')
+    123:             break;
+
+# 1 0x0045B6DD in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:46:
+
+     44: 
+     45: 
+=>   46:     myGetline(&str3, &n, stdin);
+     47:     myPuts(str3);
+     48:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 22:18:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 22:18:49
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDEA в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 130. Попытка записать данные по адресу 0x005091B8 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0xC1C (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDEA in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:130:
+
+    128:             return -1;
+    129: 
+=>  130:         (*lineptr)[i] = (char)fgetc(file);
+    131: 
+    132:         if ((*lineptr)[i] == '\0')
+
+# 1 0x0045B65A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 22:54:42, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 22:54:49
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDEA в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 130. Попытка записать данные по адресу 0x005091B8 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0xC1C (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDEA in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:130:
+
+    128:             return -1;
+    129: 
+=>  130:         (*lineptr)[i] = (char)fgetc(file);
+    131: 
+    132:         if ((*lineptr)[i] == '\0')
+
+# 1 0x0045B65A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 22:54:42, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 22:54:49
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDEA в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 130. Попытка записать данные по адресу 0x005091B8 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x6224 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDEA in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:130:
+
+    128:             return -1;
+    129: 
+=>  130:         (*lineptr)[i] = (char)fgetc(file);
+    131: 
+    132:         if ((*lineptr)[i] == '\0')
+
+# 1 0x0045B65A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str2, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 22:54:42, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 22:55:46
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDEA в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 130. Попытка записать данные по адресу 0x005091B8 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x6224 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDEA in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:130:
+
+    128:             return -1;
+    129: 
+=>  130:         (*lineptr)[i] = (char)fgetc(file);
+    131: 
+    132:         if ((*lineptr)[i] == '\0')
+
+# 1 0x0045B65A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str2, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 22:54:42, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 22:55:46
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDC6 в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 126. Попытка прочесть данные по адресу 0x00000014 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x245C (Main), GetLastError(): 998 (Неверная попытка доступа к адресу памяти). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDC6 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:126:
+
+    124:         }
+    125: 
+=>  126:         if ((*lineptr)[charactersCount] == EOF)
+    127:             return -1;
+    128: 
+
+# 1 0x0045B65A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 23:11:05, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 23:11:12
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDC6 в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 126. Попытка прочесть данные по адресу 0x00000014 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x245C (Main), GetLastError(): 998 (Неверная попытка доступа к адресу памяти). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDC6 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:126:
+
+    124:         }
+    125: 
+=>  126:         if ((*lineptr)[charactersCount] == EOF)
+    127:             return -1;
+    128: 
+
+# 1 0x0045B65A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 23:11:05, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 23:11:12
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDC6 в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 126. Попытка прочесть данные по адресу 0x00000014 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x2104 (Main), GetLastError(): 998 (Неверная попытка доступа к адресу памяти). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDC6 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:126:
+
+    124:         }
+    125: 
+=>  126:         if ((*lineptr)[charactersCount] == EOF)
+    127:             return -1;
+    128: 
+
+# 1 0x0045B65A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 23:11:05, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 23:12:33
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDC6 в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 126. Попытка прочесть данные по адресу 0x00000014 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x2104 (Main), GetLastError(): 998 (Неверная попытка доступа к адресу памяти). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDC6 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:126:
+
+    124:         }
+    125: 
+=>  126:         if ((*lineptr)[charactersCount] == EOF)
+    127:             return -1;
+    128: 
+
+# 1 0x0045B65A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 23:11:05, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 23:12:32
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDC6 в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 126. Попытка прочесть данные по адресу 0x00000014 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x698 (Main), GetLastError(): 998 (Неверная попытка доступа к адресу памяти). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDC6 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:126:
+
+    124:         }
+    125: 
+=>  126:         if ((*lineptr)[charactersCount] == EOF)
+    127:             return -1;
+    128: 
+
+# 1 0x0045B65A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 23:19:08, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 23:20:09
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDC6 в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 126. Попытка прочесть данные по адресу 0x00000014 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057B65C (32-bit), Flags: Cmdre0, Thread: 0x698 (Main), GetLastError(): 998 (Неверная попытка доступа к адресу памяти). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDC6 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:126:
+
+    124:         }
+    125: 
+=>  126:         if ((*lineptr)[charactersCount] == EOF)
+    127:             return -1;
+    128: 
+
+# 1 0x0045B65A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:47:
+
+     45: 
+     46: 
+=>   47:     myGetline(&str3, &n, stdin);
+     48:     myPuts(str3);
+     49:     putchar('\n');
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep  8 2025 23:19:08, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 08 2025 23:20:10
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------

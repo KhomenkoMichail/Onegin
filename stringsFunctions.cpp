@@ -119,7 +119,6 @@ ssize_t myGetline(char** lineptr, size_t* n, FILE* file) {
     assert(n != NULL);
     assert(file != NULL);
 
-    const size_t extraMemory = 20;
     size_t charactersCount = 0;
 
     if (*lineptr == NULL)
@@ -127,7 +126,7 @@ ssize_t myGetline(char** lineptr, size_t* n, FILE* file) {
 
     for (; ; charactersCount++) {
         if (charactersCount == *n) {
-            *n += extraMemory;
+            *n *= 2;
             *lineptr = (char*)realloc(*lineptr, *n);
         }
 

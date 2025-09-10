@@ -4,8 +4,10 @@ stringsFunctions.o: stringsFunctions.cpp
 	g++ $(CFLAGS) -c stringsFunctions.cpp
 main.o: main.cpp
 	g++ $(CFLAGS) -c main.cpp
-Strings.exe: main.o stringsFunctions.o
-	g++ $(CFLAGS) stringsFunctions.o main.o -o Strings
+arrayFunctions.o: arrayFunctions.cpp
+	g++ $(CFLAGS) -c arrayFunctions.cpp
+Strings.exe: main.o stringsFunctions.o arrayFunctions.o
+	g++ $(CFLAGS) stringsFunctions.o main.o arrayFunctions.o -o Strings
 clean:
-	rm main.o stringsFunctions.o
+	rm main.o stringsFunctions.o arrayFunctions.o
 build: Strings.exe

@@ -13,4 +13,12 @@ void fillingTriangularArr (int* array, size_t sizeOfArr);
 
 void printTriangularArr (int* array, size_t sizeOfArr);
 
+void fillingArrOfPtr (char* arrayOfPtr[], size_t numOfPtr);
+
+void printArrOfPtr (char* arrayOfPtr[], size_t numOfPtr);
+
+void freeArrOfPtr (char* arrayOfPtr[], size_t numOfPtr);
+
+void reverseArrOfPtr (char** arrayOfPtr, size_t numOfPtr);
+
 #endif

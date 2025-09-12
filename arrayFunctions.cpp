@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <assert.h>
 #include <math.h>
+#include <string.h>
+#include <stdlib.h>
 
 #include "arrayFunctions.h"
+#include "stringsFunctions.h"
 
 void fillingSquareArr (int* array, size_t sizeY, size_t sizeX) {
     assert(array != NULL);
@@ -67,5 +70,43 @@ void printTriangularArr (int* array, size_t sizeOfArr) {
         for (size_t x = 0; x < sizeX; x++)
             printf("[%d][%d] = %d  ", y, x, *((int*)array + (1+y)*y/2 + x));
         putchar('\n');
+    }
+}
+
+void fillingArrOfPtr (char** arrayOfPtr, size_t numOfPtr) {
+    assert (arrayOfPtr != NULL);
+
+    for (size_t string = 0; string < numOfPtr; string++) {
+        size_t sizeOfString = 1;
+        myGetline(&(arrayOfPtr[string]), &sizeOfString, stdin);
+        printf ("size of [%d] = %d\n", string, sizeOfString);
+    }
+}
+
+void printArrOfPtr (char** arrayOfPtr, size_t numOfPtr) {
+    assert (arrayOfPtr != NULL);
+
+    for (size_t string = 0; string < numOfPtr; string++) {
+        printf ("[%d] = ", string);
+        myPuts(arrayOfPtr[string]);
+    }
+}
+
+void freeArrOfPtr (char* arrayOfPtr[], size_t numOfPtr) {
+    assert (arrayOfPtr != NULL);
+
+    for (size_t string = 0; string < numOfPtr; string++) {
+        free(arrayOfPtr[string]);
+    }
+}
+
+void reverseArrOfPtr (char** arrayOfPtr, size_t numOfPtr) {
+    assert (arrayOfPtr != NULL);
+
+    char* ptr = NULL;
+    for (size_t string = 0; string < (numOfPtr/2); string++) {
+        ptr = arrayOfPtr[string];
+        arrayOfPtr[string] = arrayOfPtr[numOfPtr - string -1];
+        arrayOfPtr[numOfPtr - string - 1] = ptr;
     }
 }

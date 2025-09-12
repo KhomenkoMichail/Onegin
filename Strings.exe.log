@@ -1370,3 +1370,819 @@ Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
 Directory:	C:\Users\Admin\Desktop\Strings
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDEE в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 133. Попытка прочесть данные по адресу NULL в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057C65C (32-bit), Flags: Cmdre0, Thread: 0x3894 (Main), GetLastError(): 87 (Параметр задан неверно). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDEE in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:133:
+
+    131:         }
+    132: 
+=>  133:         if ((*lineptr)[charactersCount] == EOF)
+    134:             return -1;
+    135: 
+
+# 1 0x0045CE2B in C:\Users\Admin\Desktop\Strings\Strings.exe: fillingArrOfPtr() at C:/Users/Admin/Desktop/Strings/arrayFunctions.cpp:79:
+
+     77:     for (size_t string = 0; string < numOfPtr; string++) {
+     78:         size_t sizeOfString = myStrlen (arrayOfPtr[string]);
+=>   79:         myGetline(&(arrayOfPtr[string]), &sizeOfString, stdin);
+     80:     }
+     81: }
+
+# 2 0x0045B6BE in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:28:
+
+     26:     char* text[] = {string1, string2, string3, string4};
+     27: 
+=>   28:     fillingArrOfPtr(text, 4);
+     29:     printArrOfPtr(text, 4);
+     30: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 11 2025 17:27:39, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 11 2025 17:27:45
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDEE в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 133. Попытка прочесть данные по адресу NULL в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057C65C (32-bit), Flags: Cmdre0, Thread: 0x3894 (Main), GetLastError(): 87 (Параметр задан неверно). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDEE in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:133:
+
+    131:         }
+    132: 
+=>  133:         if ((*lineptr)[charactersCount] == EOF)
+    134:             return -1;
+    135: 
+
+# 1 0x0045CE2B in C:\Users\Admin\Desktop\Strings\Strings.exe: fillingArrOfPtr() at C:/Users/Admin/Desktop/Strings/arrayFunctions.cpp:79:
+
+     77:     for (size_t string = 0; string < numOfPtr; string++) {
+     78:         size_t sizeOfString = myStrlen (arrayOfPtr[string]);
+=>   79:         myGetline(&(arrayOfPtr[string]), &sizeOfString, stdin);
+     80:     }
+     81: }
+
+# 2 0x0045B6BE in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:28:
+
+     26:     char* text[] = {string1, string2, string3, string4};
+     27: 
+=>   28:     fillingArrOfPtr(text, 4);
+     29:     printArrOfPtr(text, 4);
+     30: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 11 2025 17:27:39, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 11 2025 17:27:45
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057C65C (32-bit), Flags: Cmdre0, Thread: 0x3120 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0043FD18 in C:\Users\Admin\Desktop\Strings\Strings.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/admin/downloads/codeblocks/mingw/include/txlib.h:11173
+# 1 0x771C8F03 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x771CD3CB in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x771C9D47 in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042DD64 in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:119:
+
+    117: 
+    118: ssize_t myGetline(char** lineptr, size_t* n, FILE* file) {
+=>  119:     assert(n != NULL);
+    120:     assert(file != NULL);
+    121: 
+
+# 5 0x0045CDBC in C:\Users\Admin\Desktop\Strings\Strings.exe: fillingArrOfPtr() at C:/Users/Admin/Desktop/Strings/arrayFunctions.cpp:81:
+
+     79:         //size_t sizeOfString = sizeof (arrayOfPtr[string]);
+     80:         //printf ("size of [%d] = %d\n", string, sizeOfString);
+=>   81:         myGetline(&(arrayOfPtr[string]), 0, stdin);
+     82:     }
+     83: }
+
+# 6 0x0045B66A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:23:
+
+     21:     char* text[4] = {};
+     22: 
+=>   23:     fillingArrOfPtr(text, 4);
+     24:     printArrOfPtr(text, 4);
+     25: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 11 2025 17:54:08, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 11 2025 17:54:15
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDEE в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 133. Попытка прочесть данные по адресу 0x00000001 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057C65C (32-bit), Flags: Cmdre0, Thread: 0x6FCC (Main), GetLastError(): 998 (Неверная попытка доступа к адресу памяти). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDEE in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:133:
+
+    131:         }
+    132: 
+=>  133:         if ((*lineptr)[charactersCount] == EOF)
+    134:             return -1;
+    135: 
+
+# 1 0x0045CE16 in C:\Users\Admin\Desktop\Strings\Strings.exe: fillingArrOfPtr() at C:/Users/Admin/Desktop/Strings/arrayFunctions.cpp:81:
+
+     79:     for (size_t string = 0; string < numOfPtr; string++) {
+     80:         size_t sizeOfString = 1;
+=>   81:         myGetline(&(arrayOfPtr[string]), &sizeOfString, stdin);
+     82:         printf ("size of [%d] = %d\n", string, sizeOfString);
+     83:     }
+
+# 2 0x0045B6A9 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:28:
+
+     26:     char* text[4] = {string1, string2, string3, string4};
+     27: 
+=>   28:     fillingArrOfPtr(text, 4);
+     29:     printArrOfPtr(text, 4);
+     30:     freeArrOfPtr(text, 4);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 11 2025 18:11:52, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 11 2025 18:11:59
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDEE в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 133. Попытка прочесть данные по адресу 0x00000001 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057C65C (32-bit), Flags: Cmdre0, Thread: 0x6FCC (Main), GetLastError(): 998 (Неверная попытка доступа к адресу памяти). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDEE in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:133:
+
+    131:         }
+    132: 
+=>  133:         if ((*lineptr)[charactersCount] == EOF)
+    134:             return -1;
+    135: 
+
+# 1 0x0045CE16 in C:\Users\Admin\Desktop\Strings\Strings.exe: fillingArrOfPtr() at C:/Users/Admin/Desktop/Strings/arrayFunctions.cpp:81:
+
+     79:     for (size_t string = 0; string < numOfPtr; string++) {
+     80:         size_t sizeOfString = 1;
+=>   81:         myGetline(&(arrayOfPtr[string]), &sizeOfString, stdin);
+     82:         printf ("size of [%d] = %d\n", string, sizeOfString);
+     83:     }
+
+# 2 0x0045B6A9 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:28:
+
+     26:     char* text[4] = {string1, string2, string3, string4};
+     27: 
+=>   28:     fillingArrOfPtr(text, 4);
+     29:     printArrOfPtr(text, 4);
+     30:     freeArrOfPtr(text, 4);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 11 2025 18:11:52, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 11 2025 18:11:59
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDEE в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 133. Попытка прочесть данные по адресу 0x00000001 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057C65C (32-bit), Flags: Cmdre0, Thread: 0x2F34 (Main), GetLastError(): 998 (Неверная попытка доступа к адресу памяти). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDEE in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:133:
+
+    131:         }
+    132: 
+=>  133:         if ((*lineptr)[charactersCount] == EOF)
+    134:             return -1;
+    135: 
+
+# 1 0x0045CE16 in C:\Users\Admin\Desktop\Strings\Strings.exe: fillingArrOfPtr() at C:/Users/Admin/Desktop/Strings/arrayFunctions.cpp:81:
+
+     79:     for (size_t string = 0; string < numOfPtr; string++) {
+     80:         size_t sizeOfString = 1;
+=>   81:         myGetline(&(arrayOfPtr[string]), &sizeOfString, stdin);
+     82:         printf ("size of [%d] = %d\n", string, sizeOfString);
+     83:     }
+
+# 2 0x0045B6A9 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:28:
+
+     26:     char* text[4] = {string1, string2, string3, string4};
+     27: 
+=>   28:     fillingArrOfPtr(text, 4);
+     29:     printArrOfPtr(text, 4);
+     30:     freeArrOfPtr(text, 4);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 11 2025 18:11:52, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 11 2025 18:12:14
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DDEE в функции myGetline() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 133. Попытка прочесть данные по адресу 0x00000001 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057C65C (32-bit), Flags: Cmdre0, Thread: 0x2F34 (Main), GetLastError(): 998 (Неверная попытка доступа к адресу памяти). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DDEE in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:133:
+
+    131:         }
+    132: 
+=>  133:         if ((*lineptr)[charactersCount] == EOF)
+    134:             return -1;
+    135: 
+
+# 1 0x0045CE16 in C:\Users\Admin\Desktop\Strings\Strings.exe: fillingArrOfPtr() at C:/Users/Admin/Desktop/Strings/arrayFunctions.cpp:81:
+
+     79:     for (size_t string = 0; string < numOfPtr; string++) {
+     80:         size_t sizeOfString = 1;
+=>   81:         myGetline(&(arrayOfPtr[string]), &sizeOfString, stdin);
+     82:         printf ("size of [%d] = %d\n", string, sizeOfString);
+     83:     }
+
+# 2 0x0045B6A9 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:28:
+
+     26:     char* text[4] = {string1, string2, string3, string4};
+     27: 
+=>   28:     fillingArrOfPtr(text, 4);
+     29:     printArrOfPtr(text, 4);
+     30:     freeArrOfPtr(text, 4);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 11 2025 18:11:52, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 11 2025 18:12:14
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057C65C (32-bit), Flags: Cmdre0, Thread: 0x1ACC (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0043FD18 in C:\Users\Admin\Desktop\Strings\Strings.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/admin/downloads/codeblocks/mingw/include/txlib.h:11173
+# 1 0x771C8F03 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x771CD3CB in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x771C9D47 in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0045CDAF in C:\Users\Admin\Desktop\Strings\Strings.exe: fillingArrOfPtr() at C:/Users/Admin/Desktop/Strings/arrayFunctions.cpp:77:
+
+     75: 
+     76: void fillingArrOfPtr (char** arrayOfPtr, size_t numOfPtr) {
+=>   77:     assert (arrayOfPtr != NULL);
+     78: 
+     79:     for (size_t string = 0; string < numOfPtr; string++) {
+
+# 5 0x0045B652 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:23:
+
+     21:     char** text = {};
+     22: 
+=>   23:     fillingArrOfPtr(text, 4);
+     24:     printArrOfPtr(text, 4);
+     25:     reverseArrOfPtr(&text, 4);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 11 2025 18:46:03, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 11 2025 18:46:11
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D915 в функции myPuts() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 12. Попытка прочесть данные по адресу 0x00000008 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057C65C (32-bit), Flags: Cmdre0, Thread: 0x520C (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D915 in C:\Users\Admin\Desktop\Strings\Strings.exe: myPuts() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:12:
+
+     10: 
+     11:     int returnableValue = 0;
+=>   12:     for (int i = 0; str[i] != '\0'; i++)
+     13:         returnableValue = putchar (str[i]);
+     14:     return returnableValue;
+
+# 1 0x0045CE8D in C:\Users\Admin\Desktop\Strings\Strings.exe: printArrOfPtr() at C:/Users/Admin/Desktop/Strings/arrayFunctions.cpp:91:
+
+     89:     for (size_t string = 0; string < numOfPtr; string++) {
+     90:         printf ("[%d] = ", string);
+=>   91:         myPuts(arrayOfPtr[string]);
+     92:     }
+     93: }
+
+# 2 0x0045B6A6 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:26:
+
+     24:     printArrOfPtr(text, 4);
+     25:     reverseArrOfPtr(text, 4);
+=>   26:     printArrOfPtr(text, 4);
+     27:     freeArrOfPtr(text, 4);
+     28: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 11 2025 19:37:30, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 11 2025 19:37:39
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D915 в функции myPuts() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 12. Попытка прочесть данные по адресу 0x00000008 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057C65C (32-bit), Flags: Cmdre0, Thread: 0x520C (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D915 in C:\Users\Admin\Desktop\Strings\Strings.exe: myPuts() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:12:
+
+     10: 
+     11:     int returnableValue = 0;
+=>   12:     for (int i = 0; str[i] != '\0'; i++)
+     13:         returnableValue = putchar (str[i]);
+     14:     return returnableValue;
+
+# 1 0x0045CE8D in C:\Users\Admin\Desktop\Strings\Strings.exe: printArrOfPtr() at C:/Users/Admin/Desktop/Strings/arrayFunctions.cpp:91:
+
+     89:     for (size_t string = 0; string < numOfPtr; string++) {
+     90:         printf ("[%d] = ", string);
+=>   91:         myPuts(arrayOfPtr[string]);
+     92:     }
+     93: }
+
+# 2 0x0045B6A6 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:26:
+
+     24:     printArrOfPtr(text, 4);
+     25:     reverseArrOfPtr(text, 4);
+=>   26:     printArrOfPtr(text, 4);
+     27:     freeArrOfPtr(text, 4);
+     28: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 11 2025 19:37:30, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 11 2025 19:37:39
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x7793BF67 в функции RtlFormatCurrentUserKeyPath(). Попытка прочесть данные по адресу 0x00000014 в модуле C:\WINDOWS\SYSTEM32\ntdll.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057C65C (32-bit), Flags: Cmdre0, Thread: 0x1450 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x7793BF67 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlFormatCurrentUserKeyPath()
+# 1 0x77992F10 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlTestBit()
+# 2 0x77965382 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlReAllocateHeap()
+# 3 0x771B8E6F in C:\WINDOWS\System32\msvcrt.dll: realloc()
+
+# 4 0x0042DDDF in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:130:
+
+    128:         if (charactersCount == *n) {
+    129:             *n *= 2;
+=>  130:             *lineptr = (char*)realloc(*lineptr, *n);
+    131:         }
+    132: 
+
+# 5 0x0045CDFE in C:\Users\Admin\Desktop\Strings\Strings.exe: fillingArrOfPtr() at C:/Users/Admin/Desktop/Strings/arrayFunctions.cpp:81:
+
+     79:     for (size_t string = 0; string < numOfPtr; string++) {
+     80:         size_t sizeOfString = 1;
+=>   81:         myGetline(&(arrayOfPtr[string]), &sizeOfString, stdin);
+     82:         printf ("size of [%d] = %d\n", string, sizeOfString);
+     83:     }
+
+# 6 0x0045B66A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:23:
+
+     21:     char* text[4] = {};
+     22: 
+=>   23:     fillingArrOfPtr(text, 4);
+     24:     printArrOfPtr(text, 4);
+     25:     reverseArrOfPtr(text, 4);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 11 2025 19:41:31, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 11 2025 19:41:40
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x7793BF67 в функции RtlFormatCurrentUserKeyPath(). Попытка прочесть данные по адресу 0x00000014 в модуле C:\WINDOWS\SYSTEM32\ntdll.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057C65C (32-bit), Flags: Cmdre0, Thread: 0x1450 (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x7793BF67 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlFormatCurrentUserKeyPath()
+# 1 0x77992F10 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlTestBit()
+# 2 0x77965382 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlReAllocateHeap()
+# 3 0x771B8E6F in C:\WINDOWS\System32\msvcrt.dll: realloc()
+
+# 4 0x0042DDDF in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:130:
+
+    128:         if (charactersCount == *n) {
+    129:             *n *= 2;
+=>  130:             *lineptr = (char*)realloc(*lineptr, *n);
+    131:         }
+    132: 
+
+# 5 0x0045CDFE in C:\Users\Admin\Desktop\Strings\Strings.exe: fillingArrOfPtr() at C:/Users/Admin/Desktop/Strings/arrayFunctions.cpp:81:
+
+     79:     for (size_t string = 0; string < numOfPtr; string++) {
+     80:         size_t sizeOfString = 1;
+=>   81:         myGetline(&(arrayOfPtr[string]), &sizeOfString, stdin);
+     82:         printf ("size of [%d] = %d\n", string, sizeOfString);
+     83:     }
+
+# 6 0x0045B66A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:23:
+
+     21:     char* text[4] = {};
+     22: 
+=>   23:     fillingArrOfPtr(text, 4);
+     24:     printArrOfPtr(text, 4);
+     25:     reverseArrOfPtr(text, 4);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 11 2025 19:41:31, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 11 2025 19:41:39
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x7793BF67 в функции RtlFormatCurrentUserKeyPath(). Попытка прочесть данные по адресу 0x00000014 в модуле C:\WINDOWS\SYSTEM32\ntdll.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057C65C (32-bit), Flags: Cmdre0, Thread: 0x345C (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x7793BF67 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlFormatCurrentUserKeyPath()
+# 1 0x77992F10 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlTestBit()
+# 2 0x77965382 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlReAllocateHeap()
+# 3 0x771B8E6F in C:\WINDOWS\System32\msvcrt.dll: realloc()
+
+# 4 0x0042DDDF in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:130:
+
+    128:         if (charactersCount == *n) {
+    129:             *n *= 2;
+=>  130:             *lineptr = (char*)realloc(*lineptr, *n);
+    131:         }
+    132: 
+
+# 5 0x0045CDEA in C:\Users\Admin\Desktop\Strings\Strings.exe: fillingArrOfPtr() at C:/Users/Admin/Desktop/Strings/arrayFunctions.cpp:81:
+
+     79:     for (size_t string = 0; string < numOfPtr; string++) {
+     80:         size_t sizeOfString = 1;
+=>   81:         myGetline(&(arrayOfPtr[string]), &sizeOfString, stdin);
+     82:         printf ("size of [%d] = %d\n", string, sizeOfString);
+     83:     }
+
+# 6 0x0045B66A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:23:
+
+     21:     char* text[4] = {};
+     22: 
+=>   23:     fillingArrOfPtr(text, 4);
+     24:     printArrOfPtr(text, 4);
+     25:     //reverseArrOfPtr(text, 4);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 11 2025 19:44:38, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 11 2025 19:44:44
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x7793BF67 в функции RtlFormatCurrentUserKeyPath(). Попытка прочесть данные по адресу 0x00000014 в модуле C:\WINDOWS\SYSTEM32\ntdll.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x0057C65C (32-bit), Flags: Cmdre0, Thread: 0x345C (Main), GetLastError(): 126 (Не найден указанный модуль). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x7793BF67 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlFormatCurrentUserKeyPath()
+# 1 0x77992F10 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlTestBit()
+# 2 0x77965382 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlReAllocateHeap()
+# 3 0x771B8E6F in C:\WINDOWS\System32\msvcrt.dll: realloc()
+
+# 4 0x0042DDDF in C:\Users\Admin\Desktop\Strings\Strings.exe: myGetline() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:130:
+
+    128:         if (charactersCount == *n) {
+    129:             *n *= 2;
+=>  130:             *lineptr = (char*)realloc(*lineptr, *n);
+    131:         }
+    132: 
+
+# 5 0x0045CDEA in C:\Users\Admin\Desktop\Strings\Strings.exe: fillingArrOfPtr() at C:/Users/Admin/Desktop/Strings/arrayFunctions.cpp:81:
+
+     79:     for (size_t string = 0; string < numOfPtr; string++) {
+     80:         size_t sizeOfString = 1;
+=>   81:         myGetline(&(arrayOfPtr[string]), &sizeOfString, stdin);
+     82:         printf ("size of [%d] = %d\n", string, sizeOfString);
+     83:     }
+
+# 6 0x0045B66A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:23:
+
+     21:     char* text[4] = {};
+     22: 
+=>   23:     fillingArrOfPtr(text, 4);
+     24:     printArrOfPtr(text, 4);
+     25:     //reverseArrOfPtr(text, 4);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 11 2025 19:44:38, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 11 2025 19:44:44
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------

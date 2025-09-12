@@ -14,9 +14,17 @@ int main (void) {
     //int* ptr = findNumInSquareArr(*array, 3, 4, 22);
     //printf("%p -> %d\n", ptr, *ptr);
 
-    int triangular [15] = {};
-    fillingTriangularArr(triangular, 15);
-    printTriangularArr(triangular, 15);
+    //int triangular [15] = {};
+    //fillingTriangularArr(triangular, 15);
+    //printTriangularArr(triangular, 15);
+
+    char* text[4] = {};
+
+    fillingArrOfPtr(text, 4);
+    printArrOfPtr(text, 4);
+    reverseArrOfPtr(text, 4);
+    printArrOfPtr(text, 4);
+    freeArrOfPtr(text, 4);
 
     //const char* str1 = "ABC";
     //char str2[10] = "ZXC";

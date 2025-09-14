@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <TXLib.h>
 #include <assert.h>
+#include <ctype.h>
 
 #include "stringsFunctions.h"
 
@@ -29,7 +30,7 @@ size_t myStrlen (const char* str) {
     assert(str != NULL);
 
     size_t lengthOfString = 0;
-    for (int i = 0; str[i] != '\0'; i++)
+    for (int i = 0; (str[i] != '\0') && (str[i] != '\n'); i++)
         lengthOfString++;
     return lengthOfString;
 }
@@ -110,7 +111,7 @@ char* myStrdup(const char* str) {
 
     for (int n = 0; str[n] != '\0'; n++)
         newStr[n] = str[n];
-    newStr[lengthOfStr+1] = '\0';
+    newStr[lengthOfStr] = '\0';
 
     return newStr;
 }
@@ -146,7 +147,85 @@ ssize_t myGetline(char** lineptr, size_t* n, FILE* file) {
     return charactersCount;
 }
 
+int myStrcmp(const char* str1, const char* str2) {
+    assert(str1 != NULL);
+    assert(str2 != NULL);
 
+    size_t numOfChar1  = 0;
+    size_t numOfChar2  = 0;
 
+    while ((str1[numOfChar1] != '\0') && (str2[numOfChar2] != '\0') && (str1[numOfChar1] != '\n') && (str2[numOfChar2] != '\n')) {
+        while ((!isalpha(str1[numOfChar1])) && (str1[numOfChar1] != '\0') && (str1[numOfChar1] != '\n'))
+            numOfChar1++;
 
+        while ((!isalpha(str2[numOfChar2])) && (str2[numOfChar2] != '\0') && (str2[numOfChar2] != '\n'))
+            numOfChar2++;
 
+        if (tolower(str1[numOfChar1]) != tolower(str2[numOfChar2]))
+            return (tolower(str1[numOfChar1]) - tolower(str2[numOfChar2]));
+
+        if (numOfChar1 < (myStrlen(str1) + 1))
+            numOfChar1++;
+
+        if (numOfChar2 < (myStrlen(str2) + 1))
+            numOfChar2++;
+    }
+    return (tolower(str1[numOfChar1]) - tolower(str2[numOfChar2]));
+}
+
+int reversedMyStrcmp(const char* str1, const char* str2) {
+    assert(str1 != NULL);
+    assert(str2 != NULL);
+
+    const int ERROR_TERMINATION = 1111;
+    size_t numOfChar1  = myStrlen(str1);
+    size_t numOfChar2  = myStrlen(str2);
+
+    while ((numOfChar1 != 0) && (numOfChar2 != 0)) {
+        while ((!isalpha(str1[numOfChar1])) && (numOfChar1 != 0))
+            numOfChar1--;
+
+        while ((!isalpha(str2[numOfChar2])) && (numOfChar2 != 0))
+            numOfChar2--;
+
+        if (tolower(str1[numOfChar1]) != tolower(str2[numOfChar2]))
+            return (tolower(str1[numOfChar1]) - tolower(str2[numOfChar2]));
+
+        if ((numOfChar1 > 0) && (numOfChar2 > 0))
+            numOfChar1--;
+            numOfChar2--;
+    }
+    if ((numOfChar1 == 0) && (numOfChar2 == 0))
+        return (tolower(str1[numOfChar1]) - tolower(str2[numOfChar2]));
+    if (numOfChar1 == 0)
+        return (tolower(str2[numOfChar2 - 1]));
+    if (numOfChar2 == 0)
+        return (tolower(str1[numOfChar1 - 1]));
+
+    return ERROR_TERMINATION;
+}
+
+void swapStringContents(char* str1, char* str2) {
+    assert(str1 != NULL);
+    assert(str2 != NULL);
+
+    size_t sizeOfFirstStr = myStrlen(str1) + 1;
+    size_t sizeOfSecondStr = myStrlen(str2) + 1;
+
+    char* memoryString = (char*)calloc(sizeOfFirstStr, sizeof(char));
+
+    for(size_t i = 0; i <= sizeOfFirstStr; i++)
+        memoryString[i] = str1[i];
+
+    for(size_t i = 0; i <= sizeOfFirstStr; i++)
+        str1[i] = '\0';
+    for(size_t i = 0; i <= sizeOfSecondStr; i++)
+        str1[i] = str2[i];
+
+    for(size_t i = 0; i <= sizeOfSecondStr; i++)
+        str2[i] = '\0';
+    for(size_t i = 0; i <= sizeOfFirstStr; i++)
+        str2[i] = memoryString[i];
+
+    free(memoryString);
+}

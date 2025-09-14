@@ -5,58 +5,38 @@
 
 #include "stringsFunctions.h"
 #include "arrayFunctions.h"
+#include "arrOfStringsFunctions.h"
+#include "bestOneginReader.h"
+
 
 int main (void) {
-    //int array[3][4] = {};
-    //fillingSquareArr(*array, 3, 4);
-    //printSquareArr(*array, 3, 4);
-    //printf ("sum = %d\n", sumSquareArr(*array, 3, 4));
-    //int* ptr = findNumInSquareArr(*array, 3, 4, 22);
-    //printf("%p -> %d\n", ptr, *ptr);
+/* TASK1
+    char text1[270][40] = {};
+    getSquareStringArr(text1, 270, 40, "OriginalOnegin.txt");
+    printSquareStringArr(text1, 270);
+    swapStringContents(text1[1], text1[2]);
+    printSquareStringArr(text1, 270);
+*/
 
-    //int triangular [15] = {};
-    //fillingTriangularArr(triangular, 15);
-    //printTriangularArr(triangular, 15);
+/* TASK2
+    char* text [10] = {};
+    badGetArrOfPtr(text, 10, "OriginalOnegin.txt");
+    for(int i = 0; i < 10; i++)
+        printf("[%d] = %p\n", i, text[i]);
+    printArrOfPtr(text, 10);
+*/
 
-    char* text[4] = {};
+/* TASK3
+    goodGetArrOfPtr(text, 10, "OriginalOnegin.txt");
+    for(int i = 0; i < 10; i++)
+        printf("[%d] = %p\n", i, text[i]);
+    printArrOfPtr(text, 10);
+*/
 
-    fillingArrOfPtr(text, 4);
-    printArrOfPtr(text, 4);
-    reverseArrOfPtr(text, 4);
-    printArrOfPtr(text, 4);
-    freeArrOfPtr(text, 4);
-
-    //const char* str1 = "ABC";
-    //char str2[10] = "ZXC";
-    //char* str3 = NULL;
-    //size_t n = 20;
-    //myPuts(str1);
-    //putchar('\n');
-    //printf("&C = %p, &C = %p\n", &str1[2], myStrchr(str1, 'C'));
-
-    //printf("length of str = %d\n", myStrlen(str1) );
-    //myPuts(str2);
-    //putchar('\n');
-    //myStrcat(str2, str1);
-    //myPuts(str2);
-    //putchar('\n');
-    //myStrncat(str2, str1, 1);
-    //myPuts(str2);
-    //putchar('\n');
-    //printf("%d\n", myAtoi("1252") + 3);
-    //myFgets(str2, 10, stdin);
-    //myPuts(str2);
-    //putchar('\n');
-    //char* newStr = myStrdup(str1);
-    //myPuts(newStr);
-    //putchar('\n');
-    //free(newStr);
-    //myGetline(&str3, &n, stdin);
-    //myPuts(str3);
-    //free(str3);
-    //putchar('\n');
-    //printf("lengthOfString = %d\n", n);
-
+    char* buffer = copyFileContent("OriginalOnegin.txt");
+    myPuts(buffer);
+    free(buffer);
 
     return 0;
 }
+

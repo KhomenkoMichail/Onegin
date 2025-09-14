@@ -19,4 +19,10 @@ char* myStrdup(const char* str);
 
 ssize_t myGetline(char** lineptr, size_t* n, FILE* file);
 
+int myStrcmp(const char* str1, const char* str2);
+
+int reversedMyStrcmp(const char* str1, const char* str2);
+
+void swapStringContents(char* str1, char* str2);
+
 #endif

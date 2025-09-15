@@ -8,10 +8,20 @@
 
 int myPuts(const char* str) {
     assert (str != NULL);
-
+    //int n = 1;
     int returnableValue = 0;
-    for (int i = 0; str[i] != '\0'; i++)
+    //printf("[%d]", 0);
+    for (int i = 0; (str[i] != '\0') && (str[i] != '\n') ; i++) {
+        //printf("[%d]", i);
         returnableValue = putchar (str[i]);
+        //if (str[i] == '\n')
+            //printf("\n\n");
+
+        /*if (str[i] == '\n') {
+            printf("[%d]", n);
+            n++;
+        }*/
+    }
     return returnableValue;
 }
 

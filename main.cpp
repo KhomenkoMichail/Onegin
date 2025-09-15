@@ -7,10 +7,11 @@
 #include "arrayFunctions.h"
 #include "arrOfStringsFunctions.h"
 #include "bestOneginReader.h"
+#include "textStructs.h"
 
 
 int main (void) {
-/* TASK1
+/*
     char text1[270][40] = {};
     getSquareStringArr(text1, 270, 40, "OriginalOnegin.txt");
     printSquareStringArr(text1, 270);
@@ -18,7 +19,7 @@ int main (void) {
     printSquareStringArr(text1, 270);
 */
 
-/* TASK2
+/*
     char* text [10] = {};
     badGetArrOfPtr(text, 10, "OriginalOnegin.txt");
     for(int i = 0; i < 10; i++)
@@ -26,16 +27,21 @@ int main (void) {
     printArrOfPtr(text, 10);
 */
 
-/* TASK3
+/*
     goodGetArrOfPtr(text, 10, "OriginalOnegin.txt");
     for(int i = 0; i < 10; i++)
         printf("[%d] = %p\n", i, text[i]);
     printArrOfPtr(text, 10);
 */
+    struct novel Onegin;
 
-    char* buffer = copyFileContent("OriginalOnegin.txt");
-    myPuts(buffer);
-    free(buffer);
+    getStructNovel (&Onegin, "OriginalOnegin.txt");
+    for(size_t i = 0; i < Onegin.numberOfStrings; i++){
+        printf("[%d] == ", i);
+        myPuts(Onegin.arrOfPtrsToStrings[i]);
+        putchar('\n');}
+    free(Onegin.text);
+    free(Onegin.arrOfPtrsToStrings);
 
     return 0;
 }

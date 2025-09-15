@@ -33,13 +33,16 @@ int main (void) {
         printf("[%d] = %p\n", i, text[i]);
     printArrOfPtr(text, 10);
 */
-    struct novel Onegin;
+    struct novel Onegin = {};
 
-    getStructNovel (&Onegin, "OriginalOnegin.txt");
+    getStructNovel (&Onegin,"OriginalOnegin.txt");
+
     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
-        printf("[%d] == ", i);
+        printf("[%d] == (", i);
         myPuts(Onegin.arrOfPtrsToStrings[i]);
-        putchar('\n');}
+        puts(")");
+    }
+
     free(Onegin.text);
     free(Onegin.arrOfPtrsToStrings);
 

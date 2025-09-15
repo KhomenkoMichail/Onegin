@@ -39,7 +39,7 @@ char* copyFileContent (const char* fileName) {
 }
 
 ssize_t getSizeOfFile (int fileDescriptor) {
-    struct stat fileInfo;
+    struct stat fileInfo = {};
 
     if (fstat(fileDescriptor, &fileInfo) == 0)
         return fileInfo.st_size;
@@ -78,20 +78,21 @@ char** getPointersToStrings(char** arrOfPtr, size_t numberOfStrings, char* text)
 }
 
 void getStructNovel (struct novel* structAddress, const char* fileName) {
-    assert(structAddress != NULL);
-    assert(fileName != NULL);
+    assert(structAddress);
+    assert(fileName);
 
     char* buffer = copyFileContent(fileName);
+    assert(buffer);
 
-    size_t numberOfStrings = getNumberOfStrings(buffer);
+    size_t numberOfStrings    = getNumberOfStrings(buffer);
     char** arrOfPtrsToStrings = (char**)calloc(numberOfStrings, sizeof(char*));
 
     getPointersToStrings(arrOfPtrsToStrings, numberOfStrings, buffer);
 
     *structAddress = {
-        .text = buffer,
+        .text               = buffer,
         .arrOfPtrsToStrings = arrOfPtrsToStrings,
-        .sizeOfText = strlen(buffer),
-        .numberOfStrings = numberOfStrings
+        .sizeOfText         = strlen(buffer),
+        .numberOfStrings    = numberOfStrings
     };
 }

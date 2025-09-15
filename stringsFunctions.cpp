@@ -212,6 +212,8 @@ int reversedMyStrcmp(const char* str1, const char* str2) {
     if (numOfChar2 == 0)
         return (tolower(str1[numOfChar1 - 1]));
 
+    assert ("Mishanya Kolbashanya detected a NIGHTMARE" && 0);
+
     return ERROR_TERMINATION;
 }
 
@@ -219,7 +221,7 @@ void swapStringContents(char* str1, char* str2) {
     assert(str1 != NULL);
     assert(str2 != NULL);
 
-    size_t sizeOfFirstStr = myStrlen(str1) + 1;
+    size_t sizeOfFirstStr  = myStrlen(str1) + 1;
     size_t sizeOfSecondStr = myStrlen(str2) + 1;
 
     char* memoryString = (char*)calloc(sizeOfFirstStr, sizeof(char));

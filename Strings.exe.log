@@ -6525,3 +6525,523 @@ Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
 Directory:	C:\Users\Admin\Desktop\Strings
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D9E6 в функции myStrlen() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 43. Попытка прочесть данные по адресу 0xEE1D0905 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005F1ADC (32-bit), Flags: Cmdre0, Thread: 0x70C0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D9E6 in C:\Users\Admin\Desktop\Strings\Strings.exe: myStrlen() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:43:
+
+     41: 
+     42:     size_t lengthOfString = 0;
+=>   43:     for (int i = 0; (str[i] != '\0') && (str[i] != '\n'); i++)
+     44:         lengthOfString++;
+     45:     return lengthOfString;
+
+# 1 0x0042E415 in C:\Users\Admin\Desktop\Strings\Strings.exe: myStrcmp2() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:254:
+
+    252: 
+    253:     size_t sizeOfFirstStr  = myStrlen(str1) + 1;
+=>  254:     size_t sizeOfSecondStr = myStrlen(str2) + 1;
+    255: 
+    256:     while ((*firstStringCharPtr != '\0') && (*secondStringCharPtr != '\0') && (*firstStringCharPtr != '\n') && (*secondStringCharPtr != '\n')) {
+
+# 2 0x0048B9B6 in C:\Users\Admin\Desktop\Strings\Strings.exe: stringsBubbleSort() at C:/Users/Admin/Desktop/Strings/sorts.cpp:26:
+
+     24:     for(unsigned int numOfCycle = 0; numOfCycle < structAddress->numberOfStrings; numOfCycle++)
+     25:         for (size_t numOfPtr = 0; numOfPtr < (structAddress->numberOfStrings - numOfCycle); numOfPtr++) {
+=>   26:             if (myStrcmp2((structAddress->arrOfPtrsToStrings)[numOfPtr], (structAddress->arrOfPtrsToStrings)[numOfPtr + 1]) > 0) {
+     27:                 char* cell = (structAddress->arrOfPtrsToStrings)[numOfPtr];
+     28:                 (structAddress->arrOfPtrsToStrings)[numOfPtr] = (structAddress->arrOfPtrsToStrings)[numOfPtr + 1];
+
+# 3 0x00489C4A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:27:
+
+     25:     }
+     26: 
+=>   27:     stringsBubbleSort(&Onegin);
+     28:     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
+     29:         printf("[%d] == (", i);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 17 2025 18:28:11, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 17 2025 18:29:18
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D9E6 в функции myStrlen() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 43. Попытка прочесть данные по адресу 0xEE1D0905 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005F1ADC (32-bit), Flags: Cmdre0, Thread: 0x70C0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D9E6 in C:\Users\Admin\Desktop\Strings\Strings.exe: myStrlen() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:43:
+
+     41: 
+     42:     size_t lengthOfString = 0;
+=>   43:     for (int i = 0; (str[i] != '\0') && (str[i] != '\n'); i++)
+     44:         lengthOfString++;
+     45:     return lengthOfString;
+
+# 1 0x0042E415 in C:\Users\Admin\Desktop\Strings\Strings.exe: myStrcmp2() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:254:
+
+    252: 
+    253:     size_t sizeOfFirstStr  = myStrlen(str1) + 1;
+=>  254:     size_t sizeOfSecondStr = myStrlen(str2) + 1;
+    255: 
+    256:     while ((*firstStringCharPtr != '\0') && (*secondStringCharPtr != '\0') && (*firstStringCharPtr != '\n') && (*secondStringCharPtr != '\n')) {
+
+# 2 0x0048B9B6 in C:\Users\Admin\Desktop\Strings\Strings.exe: stringsBubbleSort() at C:/Users/Admin/Desktop/Strings/sorts.cpp:26:
+
+     24:     for(unsigned int numOfCycle = 0; numOfCycle < structAddress->numberOfStrings; numOfCycle++)
+     25:         for (size_t numOfPtr = 0; numOfPtr < (structAddress->numberOfStrings - numOfCycle); numOfPtr++) {
+=>   26:             if (myStrcmp2((structAddress->arrOfPtrsToStrings)[numOfPtr], (structAddress->arrOfPtrsToStrings)[numOfPtr + 1]) > 0) {
+     27:                 char* cell = (structAddress->arrOfPtrsToStrings)[numOfPtr];
+     28:                 (structAddress->arrOfPtrsToStrings)[numOfPtr] = (structAddress->arrOfPtrsToStrings)[numOfPtr + 1];
+
+# 3 0x00489C4A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:27:
+
+     25:     }
+     26: 
+=>   27:     stringsBubbleSort(&Onegin);
+     28:     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
+     29:         printf("[%d] == (", i);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 17 2025 18:28:11, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 17 2025 18:29:18
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D9E6 в функции myStrlen() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 43. Попытка прочесть данные по адресу 0x815D29DD в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005F1ADC (32-bit), Flags: Cmdre0, Thread: 0x5F54 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D9E6 in C:\Users\Admin\Desktop\Strings\Strings.exe: myStrlen() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:43:
+
+     41: 
+     42:     size_t lengthOfString = 0;
+=>   43:     for (int i = 0; (str[i] != '\0') && (str[i] != '\n'); i++)
+     44:         lengthOfString++;
+     45:     return lengthOfString;
+
+# 1 0x0042DEEC in C:\Users\Admin\Desktop\Strings\Strings.exe: myStrcmp() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:168:
+
+    166: 
+    167:     size_t sizeOfFirstStr  = myStrlen(str1) + 1;
+=>  168:     size_t sizeOfSecondStr = myStrlen(str2) + 1;
+    169: 
+    170:     while ((str1[numOfChar1] != '\0') && (str2[numOfChar2] != '\0') && (str1[numOfChar1] != '\n') && (str2[numOfChar2] != '\n')) {
+
+# 2 0x0048B9B6 in C:\Users\Admin\Desktop\Strings\Strings.exe: stringsBubbleSort() at C:/Users/Admin/Desktop/Strings/sorts.cpp:26:
+
+     24:     for(unsigned int numOfCycle = 0; numOfCycle < structAddress->numberOfStrings; numOfCycle++)
+     25:         for (size_t numOfPtr = 0; numOfPtr < (structAddress->numberOfStrings - numOfCycle); numOfPtr++) {
+=>   26:             if (myStrcmp((structAddress->arrOfPtrsToStrings)[numOfPtr], (structAddress->arrOfPtrsToStrings)[numOfPtr + 1]) > 0) {
+     27:                 char* cell = (structAddress->arrOfPtrsToStrings)[numOfPtr];
+     28:                 (structAddress->arrOfPtrsToStrings)[numOfPtr] = (structAddress->arrOfPtrsToStrings)[numOfPtr + 1];
+
+# 3 0x00489C4A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:27:
+
+     25:     }
+     26: 
+=>   27:     stringsBubbleSort(&Onegin);
+     28:     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
+     29:         printf("[%d] == (", i);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 17 2025 18:28:11, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 17 2025 18:33:44
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D9E6 в функции myStrlen() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 43. Попытка прочесть данные по адресу 0x815D29DD в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005F1ADC (32-bit), Flags: Cmdre0, Thread: 0x5F54 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D9E6 in C:\Users\Admin\Desktop\Strings\Strings.exe: myStrlen() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:43:
+
+     41: 
+     42:     size_t lengthOfString = 0;
+=>   43:     for (int i = 0; (str[i] != '\0') && (str[i] != '\n'); i++)
+     44:         lengthOfString++;
+     45:     return lengthOfString;
+
+# 1 0x0042DEEC in C:\Users\Admin\Desktop\Strings\Strings.exe: myStrcmp() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:168:
+
+    166: 
+    167:     size_t sizeOfFirstStr  = myStrlen(str1) + 1;
+=>  168:     size_t sizeOfSecondStr = myStrlen(str2) + 1;
+    169: 
+    170:     while ((str1[numOfChar1] != '\0') && (str2[numOfChar2] != '\0') && (str1[numOfChar1] != '\n') && (str2[numOfChar2] != '\n')) {
+
+# 2 0x0048B9B6 in C:\Users\Admin\Desktop\Strings\Strings.exe: stringsBubbleSort() at C:/Users/Admin/Desktop/Strings/sorts.cpp:26:
+
+     24:     for(unsigned int numOfCycle = 0; numOfCycle < structAddress->numberOfStrings; numOfCycle++)
+     25:         for (size_t numOfPtr = 0; numOfPtr < (structAddress->numberOfStrings - numOfCycle); numOfPtr++) {
+=>   26:             if (myStrcmp((structAddress->arrOfPtrsToStrings)[numOfPtr], (structAddress->arrOfPtrsToStrings)[numOfPtr + 1]) > 0) {
+     27:                 char* cell = (structAddress->arrOfPtrsToStrings)[numOfPtr];
+     28:                 (structAddress->arrOfPtrsToStrings)[numOfPtr] = (structAddress->arrOfPtrsToStrings)[numOfPtr + 1];
+
+# 3 0x00489C4A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:27:
+
+     25:     }
+     26: 
+=>   27:     stringsBubbleSort(&Onegin);
+     28:     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
+     29:         printf("[%d] == (", i);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 17 2025 18:28:11, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 17 2025 18:33:44
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D9E6 в функции myStrlen() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 43. Попытка прочесть данные по адресу 0x1AD6E349 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005F1ADC (32-bit), Flags: Cmdre0, Thread: 0x4460 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D9E6 in C:\Users\Admin\Desktop\Strings\Strings.exe: myStrlen() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:43:
+
+     41: 
+     42:     size_t lengthOfString = 0;
+=>   43:     for (int i = 0; (str[i] != '\0') && (str[i] != '\n'); i++)
+     44:         lengthOfString++;
+     45:     return lengthOfString;
+
+# 1 0x0042E415 in C:\Users\Admin\Desktop\Strings\Strings.exe: myStrcmp2() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:254:
+
+    252: 
+    253:     size_t sizeOfFirstStr  = myStrlen(str1) + 1;
+=>  254:     size_t sizeOfSecondStr = myStrlen(str2) + 1;
+    255: 
+    256:     while ((*firstStringCharPtr != '\0') && (*secondStringCharPtr != '\0') && (*firstStringCharPtr != '\n') && (*secondStringCharPtr != '\n')) {
+
+# 2 0x0048BA19 in C:\Users\Admin\Desktop\Strings\Strings.exe: stringsBubbleSort() at C:/Users/Admin/Desktop/Strings/sorts.cpp:28:
+
+     26:             assert((structAddress->arrOfPtrsToStrings)[numOfPtr]);
+     27:             assert((structAddress->arrOfPtrsToStrings)[numOfPtr + 1]);
+=>   28:             if (myStrcmp2((structAddress->arrOfPtrsToStrings)[numOfPtr], (structAddress->arrOfPtrsToStrings)[numOfPtr + 1]) > 0) {
+     29:                 char* cell = (structAddress->arrOfPtrsToStrings)[numOfPtr];
+     30:                 (structAddress->arrOfPtrsToStrings)[numOfPtr] = (structAddress->arrOfPtrsToStrings)[numOfPtr + 1];
+
+# 3 0x00489C4A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:27:
+
+     25:     }
+     26: 
+=>   27:     stringsBubbleSort(&Onegin);
+     28:     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
+     29:         printf("[%d] == (", i);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 17 2025 18:35:19, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 17 2025 18:35:25
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D9E6 в функции myStrlen() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 43. Попытка прочесть данные по адресу 0x1AD6E349 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005F1ADC (32-bit), Flags: Cmdre0, Thread: 0x4460 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D9E6 in C:\Users\Admin\Desktop\Strings\Strings.exe: myStrlen() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:43:
+
+     41: 
+     42:     size_t lengthOfString = 0;
+=>   43:     for (int i = 0; (str[i] != '\0') && (str[i] != '\n'); i++)
+     44:         lengthOfString++;
+     45:     return lengthOfString;
+
+# 1 0x0042E415 in C:\Users\Admin\Desktop\Strings\Strings.exe: myStrcmp2() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:254:
+
+    252: 
+    253:     size_t sizeOfFirstStr  = myStrlen(str1) + 1;
+=>  254:     size_t sizeOfSecondStr = myStrlen(str2) + 1;
+    255: 
+    256:     while ((*firstStringCharPtr != '\0') && (*secondStringCharPtr != '\0') && (*firstStringCharPtr != '\n') && (*secondStringCharPtr != '\n')) {
+
+# 2 0x0048BA19 in C:\Users\Admin\Desktop\Strings\Strings.exe: stringsBubbleSort() at C:/Users/Admin/Desktop/Strings/sorts.cpp:28:
+
+     26:             assert((structAddress->arrOfPtrsToStrings)[numOfPtr]);
+     27:             assert((structAddress->arrOfPtrsToStrings)[numOfPtr + 1]);
+=>   28:             if (myStrcmp2((structAddress->arrOfPtrsToStrings)[numOfPtr], (structAddress->arrOfPtrsToStrings)[numOfPtr + 1]) > 0) {
+     29:                 char* cell = (structAddress->arrOfPtrsToStrings)[numOfPtr];
+     30:                 (structAddress->arrOfPtrsToStrings)[numOfPtr] = (structAddress->arrOfPtrsToStrings)[numOfPtr + 1];
+
+# 3 0x00489C4A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:27:
+
+     25:     }
+     26: 
+=>   27:     stringsBubbleSort(&Onegin);
+     28:     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
+     29:         printf("[%d] == (", i);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 17 2025 18:35:19, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 17 2025 18:35:25
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D9E6 в функции myStrlen() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 43. Попытка прочесть данные по адресу 0x00FCA7C7 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005F1ADC (32-bit), Flags: Cmdre0, Thread: 0x68F0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D9E6 in C:\Users\Admin\Desktop\Strings\Strings.exe: myStrlen() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:43:
+
+     41: 
+     42:     size_t lengthOfString = 0;
+=>   43:     for (int i = 0; (str[i] != '\0') && (str[i] != '\n'); i++)
+     44:         lengthOfString++;
+     45:     return lengthOfString;
+
+# 1 0x0042E415 in C:\Users\Admin\Desktop\Strings\Strings.exe: myStrcmp2() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:254:
+
+    252: 
+    253:     size_t sizeOfFirstStr  = myStrlen(str1) + 1;
+=>  254:     size_t sizeOfSecondStr = myStrlen(str2) + 1;
+    255: 
+    256:     while ((*firstStringCharPtr != '\0') && (*secondStringCharPtr != '\0') && (*firstStringCharPtr != '\n') && (*secondStringCharPtr != '\n')) {
+
+# 2 0x0048BA6A in C:\Users\Admin\Desktop\Strings\Strings.exe: stringsBubbleSort() at C:/Users/Admin/Desktop/Strings/sorts.cpp:30:
+
+     28:             printf("(structAddress->arrOfPtrsToStrings)[%d] == %p\n", numOfPtr, (structAddress->arrOfPtrsToStrings)[numOfPtr]);
+     29:             printf("(structAddress->arrOfPtrsToStrings)[%d + 1] == %p\n", numOfPtr, (structAddress->arrOfPtrsToStrings)[numOfPtr + 1]);
+=>   30:             if (myStrcmp2((structAddress->arrOfPtrsToStrings)[numOfPtr], (structAddress->arrOfPtrsToStrings)[numOfPtr + 1]) > 0) {
+     31:                 char* cell = (structAddress->arrOfPtrsToStrings)[numOfPtr];
+     32:                 (structAddress->arrOfPtrsToStrings)[numOfPtr] = (structAddress->arrOfPtrsToStrings)[numOfPtr + 1];
+
+# 3 0x00489C4A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:27:
+
+     25:     }
+     26: 
+=>   27:     stringsBubbleSort(&Onegin);
+     28:     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
+     29:         printf("[%d] == (", i);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 17 2025 18:35:19, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 17 2025 18:38:44
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D9E6 в функции myStrlen() в файле C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp на строке 43. Попытка прочесть данные по адресу 0x00FCA7C7 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005F1ADC (32-bit), Flags: Cmdre0, Thread: 0x68F0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D9E6 in C:\Users\Admin\Desktop\Strings\Strings.exe: myStrlen() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:43:
+
+     41: 
+     42:     size_t lengthOfString = 0;
+=>   43:     for (int i = 0; (str[i] != '\0') && (str[i] != '\n'); i++)
+     44:         lengthOfString++;
+     45:     return lengthOfString;
+
+# 1 0x0042E415 in C:\Users\Admin\Desktop\Strings\Strings.exe: myStrcmp2() at C:/Users/Admin/Desktop/Strings/stringsFunctions.cpp:254:
+
+    252: 
+    253:     size_t sizeOfFirstStr  = myStrlen(str1) + 1;
+=>  254:     size_t sizeOfSecondStr = myStrlen(str2) + 1;
+    255: 
+    256:     while ((*firstStringCharPtr != '\0') && (*secondStringCharPtr != '\0') && (*firstStringCharPtr != '\n') && (*secondStringCharPtr != '\n')) {
+
+# 2 0x0048BA6A in C:\Users\Admin\Desktop\Strings\Strings.exe: stringsBubbleSort() at C:/Users/Admin/Desktop/Strings/sorts.cpp:30:
+
+     28:             printf("(structAddress->arrOfPtrsToStrings)[%d] == %p\n", numOfPtr, (structAddress->arrOfPtrsToStrings)[numOfPtr]);
+     29:             printf("(structAddress->arrOfPtrsToStrings)[%d + 1] == %p\n", numOfPtr, (structAddress->arrOfPtrsToStrings)[numOfPtr + 1]);
+=>   30:             if (myStrcmp2((structAddress->arrOfPtrsToStrings)[numOfPtr], (structAddress->arrOfPtrsToStrings)[numOfPtr + 1]) > 0) {
+     31:                 char* cell = (structAddress->arrOfPtrsToStrings)[numOfPtr];
+     32:                 (structAddress->arrOfPtrsToStrings)[numOfPtr] = (structAddress->arrOfPtrsToStrings)[numOfPtr + 1];
+
+# 3 0x00489C4A in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:27:
+
+     25:     }
+     26: 
+=>   27:     stringsBubbleSort(&Onegin);
+     28:     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
+     29:         printf("[%d] == (", i);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 17 2025 18:35:19, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 17 2025 18:38:44
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------

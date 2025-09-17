@@ -7,10 +7,10 @@
 #include "stringsFunctions.h"
 
 void getSquareStringArr (char textArr[][40], size_t numOfLines, size_t lengthOfLines, const char* pathToFile) {
-    assert(textArr != NULL);
+    assert(textArr);
 
     FILE* file = fopen(pathToFile, "r");
-    assert(file != NULL);
+    assert(file);
 
     for (size_t line = 0; line < numOfLines; line++)
         fgets (textArr[line], lengthOfLines, file);
@@ -19,19 +19,20 @@ void getSquareStringArr (char textArr[][40], size_t numOfLines, size_t lengthOfL
 }
 
 void printSquareStringArr (char textArr[][40], size_t numOfLines) {
-    assert(textArr != NULL);
+    assert(textArr);
 
     for(size_t line = 0; line < numOfLines; line++) {
         printf("[%d] = ", line);
         myPuts(textArr[line]);
+        putchar('\n');
     }
 }
 
 void badGetArrOfPtr(char* arrOfPtr[], size_t numOfLines, const char* pathToFile) {
-    assert(arrOfPtr != NULL);
+    assert(arrOfPtr);
 
     FILE* file = fopen(pathToFile, "r");
-    assert(file != NULL);
+    assert(file);
     char str[40] = {};
 
     for(size_t line = 0; line < numOfLines; line++) {
@@ -42,10 +43,10 @@ void badGetArrOfPtr(char* arrOfPtr[], size_t numOfLines, const char* pathToFile)
 }
 
 void goodGetArrOfPtr(char* arrOfPtr[], size_t numOfLines, const char* pathToFile) {
-    assert(arrOfPtr != NULL);
+    assert(arrOfPtr);
 
     FILE* file = fopen(pathToFile, "r");
-    assert(file != NULL);
+    assert(file);
 
     for(size_t line = 0; line < numOfLines; line++) {
         char str[40] = {};

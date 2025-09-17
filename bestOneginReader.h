@@ -1,11 +1,11 @@
 #ifndef BEST_ONEGIN_READER_H
 #define BEST_ONEGIN_READER_H
 
-char* copyFileContent (const char* fileName);
+char* copyFileContent (struct novel* structAddress, const char* fileName);
 
 ssize_t getSizeOfFile (int fileDescriptor);
 
-size_t getNumberOfStrings (char* text);
+size_t getNumberOfSymbols (char* text, char searchedSymbol);
 
 char** getPointersToStrings (char** arrOfPtr, size_t numberOfStrings, char* text);
 

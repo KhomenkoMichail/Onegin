@@ -9,12 +9,13 @@
 #include "stringsFunctions.h"
 #include "textStructs.h"
 
-char* copyFileContent (const char* fileName) {
-    assert(fileName != NULL);
+char* copyFileContent (struct novel* structAddress, const char* fileName) {
+    assert(fileName);
 
     int fileDescriptor = open(fileName, O_RDONLY, 0);
     if (fileDescriptor == -1) {
-        perror("Ошибка открытия файла");
+        fprintf(stderr, "Error of opening file \"%s\"", fileName);
+        perror("");
         return NULL;
     }
 
@@ -26,16 +27,18 @@ char* copyFileContent (const char* fileName) {
 
     char* fileCopyBuffer = (char*)calloc(sizeOfFile + 1, sizeof(char));
 
-    size_t numOfReadedSymbols = read(fileDescriptor, fileCopyBuffer, sizeOfFile);
-    fileCopyBuffer[numOfReadedSymbols] = '\0';
-    return fileCopyBuffer;
-    /*if (read(fileDescriptor, fileCopyBuffer, sizeOfFile) == -1) {
-        perror ("Ошибка чтения файла");
-        return 0;
-    }
-    else return fileCopyBuffer;
+    size_t numOfReadSymbols = read(fileDescriptor, fileCopyBuffer, sizeOfFile);
+    fileCopyBuffer[numOfReadSymbols] = '\0';
 
-    return NULL;*/
+    if(close(fileDescriptor) != 0) {
+        fprintf(stderr, "Error of closing file \"%s\"", fileName);
+        perror("");
+        return NULL;
+    }
+
+    structAddress->sizeOfText = numOfReadSymbols;
+
+    return fileCopyBuffer;
 }
 
 ssize_t getSizeOfFile (int fileDescriptor) {
@@ -44,24 +47,24 @@ ssize_t getSizeOfFile (int fileDescriptor) {
     if (fstat(fileDescriptor, &fileInfo) == 0)
         return fileInfo.st_size;
 
-    perror("Ошибка получения размера файла");
+    perror("Error of getting the size of the file");
     return -1;
 }
 
-size_t getNumberOfStrings (char* text) {
-    assert(text != NULL);
+size_t getNumberOfSymbols (char* text, char searchedSymbol) {
+    assert(text);
 
-    size_t numOfStrings = 0;
+    size_t numOfSymbolsFound = 0;
     for(size_t numOfChar = 0; text[numOfChar] != '\0'; numOfChar++)
-        if (text[numOfChar] == '\n')
-            numOfStrings++;
+        if (text[numOfChar] == searchedSymbol)
+            numOfSymbolsFound++;
 
-    return numOfStrings;
+    return numOfSymbolsFound;
 }
 
 char** getPointersToStrings(char** arrOfPtr, size_t numberOfStrings, char* text) {
-    assert(arrOfPtr != NULL);
-    assert(text != NULL);
+    assert(arrOfPtr);
+    assert(text);
 
     size_t line = 0;
     arrOfPtr[line] = text;
@@ -81,18 +84,15 @@ void getStructNovel (struct novel* structAddress, const char* fileName) {
     assert(structAddress);
     assert(fileName);
 
-    char* buffer = copyFileContent(fileName);
+    char* buffer = copyFileContent(structAddress, fileName);
     assert(buffer);
 
-    size_t numberOfStrings    = getNumberOfStrings(buffer);
+    size_t numberOfStrings    = getNumberOfSymbols(buffer, '\n');
     char** arrOfPtrsToStrings = (char**)calloc(numberOfStrings, sizeof(char*));
 
     getPointersToStrings(arrOfPtrsToStrings, numberOfStrings, buffer);
 
-    *structAddress = {
-        .text               = buffer,
-        .arrOfPtrsToStrings = arrOfPtrsToStrings,
-        .sizeOfText         = strlen(buffer),
-        .numberOfStrings    = numberOfStrings
-    };
+    structAddress->text               = buffer;
+    structAddress->arrOfPtrsToStrings = arrOfPtrsToStrings;
+    structAddress->numberOfStrings    = numberOfStrings;
 }

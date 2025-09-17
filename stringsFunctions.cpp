@@ -7,7 +7,7 @@
 #include "stringsFunctions.h"
 
 int myPuts(const char* str) {
-    assert (str != NULL);
+    assert (str);
     //int n = 1;
     int returnableValue = 0;
     //printf("[%d]", 0);
@@ -26,7 +26,7 @@ int myPuts(const char* str) {
 }
 
 const char* myStrchr (const char* str, int searchedSymbol) {
-    assert(str != NULL);
+    assert(str);
 
     const char* symbolAddress = NULL;
     for (int i = 0; str[i] != '\0'; i++) {
@@ -37,7 +37,7 @@ const char* myStrchr (const char* str, int searchedSymbol) {
 }
 
 size_t myStrlen (const char* str) {
-    assert(str != NULL);
+    assert(str);
 
     size_t lengthOfString = 0;
     for (int i = 0; (str[i] != '\0') && (str[i] != '\n'); i++)
@@ -46,8 +46,8 @@ size_t myStrlen (const char* str) {
 }
 
 char* myStrcat (char* changedString, const char* addedString) {
-    assert(changedString != NULL);
-    assert(addedString != NULL);
+    assert(changedString);
+    assert(addedString);
 
     size_t lengthOfFirst = 0;
     size_t lengthOfSecond = 0;
@@ -65,8 +65,8 @@ char* myStrcat (char* changedString, const char* addedString) {
 }
 
 char* myStrncat(char* changedString, const char* addedString, size_t n) {
-    assert(changedString != NULL);
-    assert(addedString != NULL);
+    assert(changedString);
+    assert(addedString);
 
     size_t lengthOfFirst = 0;
     size_t lengthOfSecond = 0;
@@ -84,7 +84,7 @@ char* myStrncat(char* changedString, const char* addedString, size_t n) {
 }
 
 int myAtoi(const char* str) {
-    assert(str != NULL);
+    assert(str);
 
     int num = 0;
     for (int i = 0; (str[i] >= '0') && (str[i] <= '9'); i++)
@@ -93,8 +93,8 @@ int myAtoi(const char* str) {
 }
 
 char* myFgets (char* str, int stringSize, FILE* file) {
-    assert(str != NULL);
-    assert(file != NULL);
+    assert(str);
+    assert(file);
 
     for (int i = 0; i <=  stringSize; i++) {
         str[i] = (char)fgetc(file);
@@ -111,7 +111,7 @@ char* myFgets (char* str, int stringSize, FILE* file) {
 }
 
 char* myStrdup(const char* str) {
-    assert(str != NULL);
+    assert(str);
 
     size_t lengthOfStr = 0;
 
@@ -127,8 +127,8 @@ char* myStrdup(const char* str) {
 }
 
 ssize_t myGetline(char** lineptr, size_t* n, FILE* file) {
-    assert(n != NULL);
-    assert(file != NULL);
+    assert(n);
+    assert(file);
 
     size_t charactersCount = 0;
 
@@ -158,11 +158,14 @@ ssize_t myGetline(char** lineptr, size_t* n, FILE* file) {
 }
 
 int myStrcmp(const char* str1, const char* str2) {
-    assert(str1 != NULL);
-    assert(str2 != NULL);
+    assert(str1);
+    assert(str2);
 
     size_t numOfChar1  = 0;
     size_t numOfChar2  = 0;
+
+    size_t sizeOfFirstStr  = myStrlen(str1) + 1;
+    size_t sizeOfSecondStr = myStrlen(str2) + 1;
 
     while ((str1[numOfChar1] != '\0') && (str2[numOfChar2] != '\0') && (str1[numOfChar1] != '\n') && (str2[numOfChar2] != '\n')) {
         while ((!isalpha(str1[numOfChar1])) && (str1[numOfChar1] != '\0') && (str1[numOfChar1] != '\n'))
@@ -174,20 +177,19 @@ int myStrcmp(const char* str1, const char* str2) {
         if (tolower(str1[numOfChar1]) != tolower(str2[numOfChar2]))
             return (tolower(str1[numOfChar1]) - tolower(str2[numOfChar2]));
 
-        if (numOfChar1 < (myStrlen(str1) + 1))
+        if (numOfChar1 < (sizeOfFirstStr))
             numOfChar1++;
 
-        if (numOfChar2 < (myStrlen(str2) + 1))
+        if (numOfChar2 < (sizeOfSecondStr))
             numOfChar2++;
     }
     return (tolower(str1[numOfChar1]) - tolower(str2[numOfChar2]));
 }
 
 int reversedMyStrcmp(const char* str1, const char* str2) {
-    assert(str1 != NULL);
-    assert(str2 != NULL);
+    assert(str1);
+    assert(str2);
 
-    const int ERROR_TERMINATION = 1111;
     size_t numOfChar1  = myStrlen(str1);
     size_t numOfChar2  = myStrlen(str2);
 
@@ -212,14 +214,13 @@ int reversedMyStrcmp(const char* str1, const char* str2) {
     if (numOfChar2 == 0)
         return (tolower(str1[numOfChar1 - 1]));
 
-    assert ("Mishanya Kolbashanya detected a NIGHTMARE" && 0);
-
-    return ERROR_TERMINATION;
+    assert ("Error in function reversedMyStrcmp" && 0);
+    return 0;
 }
 
 void swapStringContents(char* str1, char* str2) {
-    assert(str1 != NULL);
-    assert(str2 != NULL);
+    assert(str1);
+    assert(str2);
 
     size_t sizeOfFirstStr  = myStrlen(str1) + 1;
     size_t sizeOfSecondStr = myStrlen(str2) + 1;
@@ -240,4 +241,60 @@ void swapStringContents(char* str1, char* str2) {
         str2[i] = memoryString[i];
 
     free(memoryString);
+}
+
+int myStrcmp2 (const char* str1, const char* str2) {
+    assert(str1);
+    assert(str2);
+
+    const char* firstStringCharPtr  = str1;
+    const char* secondStringCharPtr  = str2;
+
+    size_t sizeOfFirstStr  = myStrlen(str1) + 1;
+    size_t sizeOfSecondStr = myStrlen(str2) + 1;
+
+    while ((*firstStringCharPtr != '\0') && (*secondStringCharPtr != '\0') && (*firstStringCharPtr != '\n') && (*secondStringCharPtr != '\n')) {
+        moveCharPointer(&firstStringCharPtr);
+        moveCharPointer(&secondStringCharPtr);
+
+        if (tolower(*firstStringCharPtr) != tolower(*secondStringCharPtr))
+            return (tolower(*firstStringCharPtr) - tolower(*secondStringCharPtr));
+
+        if (firstStringCharPtr < (str1 + sizeOfFirstStr))
+            firstStringCharPtr++;
+
+        if (secondStringCharPtr < (str2 + sizeOfSecondStr))
+            secondStringCharPtr++;
+    }
+    return (tolower(*firstStringCharPtr) - tolower(*secondStringCharPtr));
+}
+
+void moveCharPointer(const char** charPointer) {
+    assert(charPointer);
+
+    while ((!isalpha(**charPointer)) && (**charPointer != '\0') && (**charPointer != '\n'))
+        (*charPointer)++;
+}
+
+void swapStringContents2(char* str1, char* str2) {
+    assert(str1);
+    assert(str2);
+
+    char cell = 0;
+    size_t lengthOfStr1 = myStrlen(str1) + 1;
+    size_t lengthOfStr2 = myStrlen(str2) + 1;
+    printf("%d\n%d\n", lengthOfStr1, lengthOfStr2);
+
+    for(size_t numOfChar = 0; (numOfChar < lengthOfStr1) &&
+                              (numOfChar < lengthOfStr2); numOfChar++) {
+
+        cell = str1[numOfChar];
+        putchar(cell);
+        str1[numOfChar] = str2[numOfChar];
+        printf("[%d] == %c\n", numOfChar, str1[numOfChar]);
+        str2[numOfChar] = cell;
+    }
+
+    str1[lengthOfStr1] = '\0';
+    str2[lengthOfStr2] = '\0';
 }

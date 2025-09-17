@@ -25,4 +25,9 @@ int reversedMyStrcmp(const char* str1, const char* str2);
 
 void swapStringContents(char* str1, char* str2);
 
+int myStrcmp2 (const char* str1, const char* str2);
+
+void moveCharPointer(const char** charPointer);
+
+void swapStringContents2(char* str1, char* str2);
 #endif

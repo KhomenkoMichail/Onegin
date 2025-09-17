@@ -6,12 +6,14 @@ main.o: main.cpp
 	g++ $(CFLAGS) -c main.cpp
 arrayFunctions.o: arrayFunctions.cpp
 	g++ $(CFLAGS) -c arrayFunctions.cpp
+sorts.o: sorts.cpp
+	g++ $(CFLAGS) -c sorts.cpp
 arrOfStringsFunctions.o: arrOfStringsFunctions.cpp
 	g++ $(CFLAGS) -c arrOfStringsFunctions.cpp
 bestOneginReader.o: bestOneginReader.cpp
 	g++ $(CFLAGS) -c bestOneginReader.cpp
-Strings.exe: main.o stringsFunctions.o arrayFunctions.o arrOfStringsFunctions.o bestOneginReader.o
-	g++ $(CFLAGS) stringsFunctions.o bestOneginReader.o main.o arrayFunctions.o arrOfStringsFunctions.o -o Strings
+Strings.exe: main.o stringsFunctions.o arrayFunctions.o arrOfStringsFunctions.o bestOneginReader.o sorts.o
+	g++ $(CFLAGS) stringsFunctions.o bestOneginReader.o main.o arrayFunctions.o arrOfStringsFunctions.o sorts.o -o Strings
 clean:
-	rm main.o stringsFunctions.o arrayFunctions.o arrOfStringsFunctions.o bestOneginReader.o
+	rm main.o stringsFunctions.o arrayFunctions.o arrOfStringsFunctions.o bestOneginReader.o sorts.o
 build: Strings.exe

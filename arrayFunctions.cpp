@@ -8,7 +8,7 @@
 #include "stringsFunctions.h"
 
 void fillingSquareArr (int* array, size_t sizeY, size_t sizeX) {
-    assert(array != NULL);
+    assert(array);
 
     for (size_t y = 0; y < sizeY; y++)
         for (size_t x = 0; x < sizeX; x++)
@@ -16,7 +16,7 @@ void fillingSquareArr (int* array, size_t sizeY, size_t sizeX) {
 }
 
 void printSquareArr (int* array, size_t sizeY, size_t sizeX) {
-    assert(array != NULL);
+    assert(array);
 
     for (size_t y = 0; y < sizeY; y++) {
         for (size_t x = 0; x < sizeX; x++)
@@ -26,7 +26,7 @@ void printSquareArr (int* array, size_t sizeY, size_t sizeX) {
 }
 
 int sumSquareArr (int* array, size_t sizeY, size_t sizeX) {
-    assert(array != NULL);
+    assert(array);
 
     int sum = 0;
     for (size_t y = 0; y < sizeY; y++)
@@ -37,7 +37,7 @@ int sumSquareArr (int* array, size_t sizeY, size_t sizeX) {
 }
 
 int* findNumInSquareArr (int* array, size_t sizeY, size_t sizeX, int requiredNumber) {
-    assert(array != NULL);
+    assert(array);
     int* pointerToRequiredNumber = NULL;
 
     for (size_t y = 0; y < sizeY; y++)
@@ -49,7 +49,7 @@ int* findNumInSquareArr (int* array, size_t sizeY, size_t sizeX, int requiredNum
 }
 
 void fillingTriangularArr (int* array, size_t sizeOfArr) {
-    assert(array != NULL);
+    assert(array);
 
     size_t sizeY = (-1 + (size_t)sqrt(1 + 8*sizeOfArr))/2;
     size_t sizeX = 0;
@@ -61,7 +61,7 @@ void fillingTriangularArr (int* array, size_t sizeOfArr) {
 }
 
 void printTriangularArr (int* array, size_t sizeOfArr) {
-    assert(array != NULL);
+    assert(array);
 
     size_t sizeY = (-1 + (size_t)sqrt(1 + 8*sizeOfArr))/2;
     size_t sizeX = 0;
@@ -74,7 +74,7 @@ void printTriangularArr (int* array, size_t sizeOfArr) {
 }
 
 void fillingArrOfPtr (char** arrayOfPtr, size_t numOfPtr) {
-    assert (arrayOfPtr != NULL);
+    assert (arrayOfPtr);
 
     for (size_t string = 0; string < numOfPtr; string++) {
         size_t sizeOfString = 1;
@@ -84,7 +84,7 @@ void fillingArrOfPtr (char** arrayOfPtr, size_t numOfPtr) {
 }
 
 void printArrOfPtr (char** arrayOfPtr, size_t numOfPtr) {
-    assert (arrayOfPtr != NULL);
+    assert (arrayOfPtr);
 
     for (size_t string = 0; string < numOfPtr; string++) {
         printf ("[%d] = ", string);
@@ -93,7 +93,7 @@ void printArrOfPtr (char** arrayOfPtr, size_t numOfPtr) {
 }
 
 void freeArrOfPtr (char* arrayOfPtr[], size_t numOfPtr) {
-    assert (arrayOfPtr != NULL);
+    assert (arrayOfPtr);
 
     for (size_t string = 0; string < numOfPtr; string++) {
         free(arrayOfPtr[string]);
@@ -101,7 +101,7 @@ void freeArrOfPtr (char* arrayOfPtr[], size_t numOfPtr) {
 }
 
 void reverseArrOfPtr (char** arrayOfPtr, size_t numOfPtr) {
-    assert (arrayOfPtr != NULL);
+    assert (arrayOfPtr);
 
     char* ptr = NULL;
     for (size_t string = 0; string < (numOfPtr/2); string++) {

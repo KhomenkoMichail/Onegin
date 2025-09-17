@@ -5,6 +5,8 @@
 #include "sorts.h"
 #include "textStructs.h"
 
+typedef int (*comparefunc_t)(const char* str1, const char* str2);
+
 void intBubbleSort (int* arr, size_t sizeOfArr) {
     assert(arr);
 
@@ -18,7 +20,7 @@ void intBubbleSort (int* arr, size_t sizeOfArr) {
         }
 }
 
-void stringsBubbleSort (struct novel* structAddress) {
+void stringsBubbleSort (struct novel* structAddress, comparefunc_t compareFuncAddress) {
     assert(structAddress);
 
     for(unsigned int numOfCycle = 0; numOfCycle < structAddress->numberOfStrings; numOfCycle++)
@@ -26,7 +28,7 @@ void stringsBubbleSort (struct novel* structAddress) {
             assert((structAddress->arrOfPtrsToStrings)[numOfPtr]);
             assert((structAddress->arrOfPtrsToStrings)[numOfPtr + 1]);
 
-            if (myStrcmp2((structAddress->arrOfPtrsToStrings)[numOfPtr], (structAddress->arrOfPtrsToStrings)[numOfPtr + 1]) > 0) {
+            if ((*compareFuncAddress)((structAddress->arrOfPtrsToStrings)[numOfPtr], (structAddress->arrOfPtrsToStrings)[numOfPtr + 1]) > 0) {
                 char* cell = (structAddress->arrOfPtrsToStrings)[numOfPtr];
                 (structAddress->arrOfPtrsToStrings)[numOfPtr] = (structAddress->arrOfPtrsToStrings)[numOfPtr + 1];
                 (structAddress->arrOfPtrsToStrings)[numOfPtr + 1] = cell;

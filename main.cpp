@@ -24,7 +24,7 @@ int main (void) {
         puts(")");
     }
 
-    stringsBubbleSort(&Onegin);
+    stringsBubbleSort(&Onegin, &reversedMyStrcmp);
     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
         printf("[%d] == (", i);
         myPuts(Onegin.arrOfPtrsToStrings[i]);

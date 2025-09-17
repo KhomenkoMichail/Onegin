@@ -1,9 +1,14 @@
 #ifndef TEXT_STRUCTS_H
 #define TEXT_STRUCTS_H
 
+struct line {
+    char* ptrToString;
+    size_t lengthOfString;
+};
+
 struct novel {
     char* text;
-    char** arrOfPtrsToStrings;
+    struct line* arrOfStringStructs;
     size_t sizeOfText;
     size_t numberOfStrings;
 };

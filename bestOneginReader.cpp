@@ -79,7 +79,7 @@ char** getPointersToStrings(char** arrOfPtr, size_t numberOfStrings, char* text)
 
     return arrOfPtr;
 }
-
+/*
 void getStructNovel (struct novel* structAddress, const char* fileName) {
     assert(structAddress);
     assert(fileName);
@@ -96,3 +96,55 @@ void getStructNovel (struct novel* structAddress, const char* fileName) {
     structAddress->arrOfPtrsToStrings = arrOfPtrsToStrings;
     structAddress->numberOfStrings    = numberOfStrings;
 }
+*/
+///
+void getStructNovel2 (struct novel* structAddress, const char* fileName) {
+    assert(structAddress);
+    assert(fileName);
+
+    char* buffer = copyFileContent(structAddress, fileName);
+    assert(buffer);
+
+    size_t numberOfStrings    = getNumberOfSymbols(buffer, '\n');
+    char** arrOfPtrsToStrings = (char**)calloc(numberOfStrings, sizeof(*arrOfPtrsToStrings));
+
+    structAddress->text               = buffer;
+    structAddress->numberOfStrings    = numberOfStrings;
+
+    getArrOfStringStructs(structAddress);
+
+}
+
+void getArrOfStringStructs (struct novel* structAddress) {
+    assert(structAddress);
+
+    structAddress->arrOfStringStructs = (struct line*)calloc(structAddress->numberOfStrings, sizeof(struct line));
+    size_t line = 0;
+    (structAddress->arrOfStringStructs[line]).ptrToString = structAddress->text;
+    //(structAddress->arrOfStringStructs[line]).lengthOfString = myStrlen((structAddress->arrOfStringStructs[line]).ptrToString) + 1;
+    line++;
+
+    size_t numOfCharInText = 0;
+    //size_t lengthOfString = 0;
+    for( ; (structAddress->text[numOfCharInText] != '\0') && (line < structAddress->numberOfStrings) ; numOfCharInText++) {
+        //lengthOfString++;
+        if (structAddress->text[numOfCharInText] == '\n') {
+            (structAddress->arrOfStringStructs[line]).ptrToString = structAddress->text + numOfCharInText + 1;
+            //(structAddress->arrOfStringStructs[line]).lengthOfString = lengthOfString + 1;
+            line++;
+            //lengthOfString = 0;
+        }
+    }
+    getLengthOfStrings(structAddress);
+
+}
+
+void getLengthOfStrings (struct novel* structAddress) {
+    assert(structAddress);
+
+    for(size_t line = 0; line < structAddress->numberOfStrings - 1; line++)
+        (structAddress->arrOfStringStructs[line]).lengthOfString = (size_t)((structAddress->arrOfStringStructs[line+1]).ptrToString - (structAddress->arrOfStringStructs[line]).ptrToString);
+
+    (structAddress->arrOfStringStructs[structAddress->numberOfStrings - 1]).lengthOfString = myStrlen((structAddress->arrOfStringStructs[structAddress->numberOfStrings - 1]).ptrToString) + 1;
+}
+

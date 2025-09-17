@@ -16,15 +16,15 @@ int main (void) {
 
 
     struct novel Onegin = {};
-    getStructNovel (&Onegin,"OriginalOnegin.txt");
+    getStructNovel2 (&Onegin,"OriginalOnegin.txt");
 
     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
         printf("[%d] == (", i);
-        myPuts(Onegin.arrOfPtrsToStrings[i]);
-        puts(")");
+        myPuts((Onegin.arrOfStringStructs[i]).ptrToString);
+        printf(") length == %d\n", (Onegin.arrOfStringStructs[i]).lengthOfString);
     }
 
-    stringsBubbleSort(&Onegin, &reversedMyStrcmp);
+/*    stringsBubbleSort(&Onegin, &reversedMyStrcmp);
     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
         printf("[%d] == (", i);
         myPuts(Onegin.arrOfPtrsToStrings[i]);
@@ -33,5 +33,7 @@ int main (void) {
     free(Onegin.text);
     free(Onegin.arrOfPtrsToStrings);
     return 0;
+
+*/
 }
 

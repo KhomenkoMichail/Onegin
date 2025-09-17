@@ -19,12 +19,14 @@ void intBubbleSort (int* arr, size_t sizeOfArr) {
             }
         }
 }
-
+/*
 void stringsBubbleSort (struct novel* structAddress, comparefunc_t compareFuncAddress) {
     assert(structAddress);
 
     for(unsigned int numOfCycle = 0; numOfCycle < structAddress->numberOfStrings; numOfCycle++)
+
         for (size_t numOfPtr = 0; numOfPtr < (structAddress->numberOfStrings - numOfCycle - 1); numOfPtr++) {
+
             assert((structAddress->arrOfPtrsToStrings)[numOfPtr]);
             assert((structAddress->arrOfPtrsToStrings)[numOfPtr + 1]);
 
@@ -36,5 +38,5 @@ void stringsBubbleSort (struct novel* structAddress, comparefunc_t compareFuncAd
         }
 }
 
-
+*/
 

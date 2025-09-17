@@ -11,4 +11,10 @@ char** getPointersToStrings (char** arrOfPtr, size_t numberOfStrings, char* text
 
 void getStructNovel (struct novel* structAddress, const char* fileName);
 
+void getStructNovel2 (struct novel* structAddress, const char* fileName);
+
+void getLengthOfStrings (struct novel* structAddress);
+
+void getArrOfStringStructs (struct novel* structAddress);
+
 #endif

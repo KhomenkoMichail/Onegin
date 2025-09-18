@@ -16,8 +16,8 @@ int main (void) {
 
 
     struct novel Onegin = {};
-    getStructNovel2 (&Onegin,"testOnegin.txt");
-
+    getStructNovel2 (&Onegin,"Onegin.txt");
+/*
     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
         printf("[%d] == (", i);
         myPuts((Onegin.arrOfStringStructs[i]).ptrToString);
@@ -30,7 +30,7 @@ int main (void) {
         myPuts((Onegin.arrOfStringStructs[i]).ptrToString);
         printf(") length == %d\n", (Onegin.arrOfStringStructs[i]).lengthOfString);
     }
-
+*/
     qsort(Onegin.arrOfStringStructs, Onegin.numberOfStrings, sizeof(struct line), &reversedMyStrcmp2);
 
     for(size_t i = 0; i < Onegin.numberOfStrings; i++){

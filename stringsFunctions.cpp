@@ -330,32 +330,32 @@ int reversedMyStrcmp2(const void* str1, const void* str2) {
     assert(str1);
     assert(str2);
 
-    const struct line line1 = (struct line)(str1);
-    const struct line line2 = (struct line)(str2);
+    const struct line* line1 = (const struct line*)(str1);
+    const struct line* line2 = (const struct line*)(str2);
 
-    size_t numOfChar1  = line1.lengthOfString - 1;
-    size_t numOfChar2  = line2.lengthOfString - 1;
+    size_t numOfChar1  = line1->lengthOfString - 1;
+    size_t numOfChar2  = line2->lengthOfString - 1;
 
     while ((numOfChar1 != 0) && (numOfChar2 != 0)) {
-        while ((!isalpha(line1.ptrToString[numOfChar1])) && (numOfChar1 != 0))
+        while ((!isalpha(line1->ptrToString[numOfChar1])) && (numOfChar1 != 0))
             numOfChar1--;
 
-        while ((!isalpha(line2.ptrToString[numOfChar2])) && (numOfChar2 != 0))
+        while ((!isalpha(line2->ptrToString[numOfChar2])) && (numOfChar2 != 0))
             numOfChar2--;
 
-        if (tolower(line1.ptrToString[numOfChar1]) != tolower(line2.ptrToString[numOfChar2]))
-            return (tolower(line1.ptrToString[numOfChar1]) - tolower(line2.ptrToString[numOfChar2]));
+        if (tolower(line1->ptrToString[numOfChar1]) != tolower(line2->ptrToString[numOfChar2]))
+            return (tolower(line1->ptrToString[numOfChar1]) - tolower(line2->ptrToString[numOfChar2]));
 
         if ((numOfChar1 > 0) && (numOfChar2 > 0))
             numOfChar1--;
             numOfChar2--;
     }
     if ((numOfChar1 == 0) && (numOfChar2 == 0))
-        return (tolower(line1.ptrToString[numOfChar1]) - tolower(line2.ptrToString[numOfChar2]));
+        return (tolower(line1->ptrToString[numOfChar1]) - tolower(line2->ptrToString[numOfChar2]));
     if (numOfChar1 == 0)
-        return (tolower(line2.ptrToString[numOfChar2 - 1]));
+        return (tolower(line2->ptrToString[numOfChar2 - 1]));
     if (numOfChar2 == 0)
-        return (tolower(line1.ptrToString[numOfChar1 - 1]));
+        return (tolower(line1->ptrToString[numOfChar1 - 1]));
 
     assert ("Error in function reversedMyStrcmp" && 0);
     return 0;

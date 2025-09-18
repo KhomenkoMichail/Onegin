@@ -10,10 +10,10 @@ sorts.o: sorts.cpp
 	g++ $(CFLAGS) -c sorts.cpp
 arrOfStringsFunctions.o: arrOfStringsFunctions.cpp
 	g++ $(CFLAGS) -c arrOfStringsFunctions.cpp
-bestOneginReader.o: bestOneginReader.cpp
-	g++ $(CFLAGS) -c bestOneginReader.cpp
-Strings.exe: main.o stringsFunctions.o arrayFunctions.o arrOfStringsFunctions.o bestOneginReader.o sorts.o
-	g++ $(CFLAGS) stringsFunctions.o bestOneginReader.o main.o arrayFunctions.o arrOfStringsFunctions.o sorts.o -o Strings
+structNovelFunctions.o: structNovelFunctions.cpp
+	g++ $(CFLAGS) -c structNovelFunctions.cpp
+Strings.exe: main.o stringsFunctions.o arrayFunctions.o arrOfStringsFunctions.o structNovelFunctions.o sorts.o
+	g++ $(CFLAGS) stringsFunctions.o structNovelFunctions.o main.o arrayFunctions.o arrOfStringsFunctions.o sorts.o -o Strings
 clean:
-	rm main.o stringsFunctions.o arrayFunctions.o arrOfStringsFunctions.o bestOneginReader.o sorts.o
+	rm main.o stringsFunctions.o arrayFunctions.o arrOfStringsFunctions.o structNovelFunctions.o sorts.o
 build: Strings.exe

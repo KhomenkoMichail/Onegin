@@ -9,20 +9,23 @@
 
 int myPuts(const char* str) {
     assert (str);
-    //int n = 1;
-    int returnableValue = 0;
-    //printf("[%d]", 0);
-    for (int i = 0; (str[i] != '\0') && (str[i] != '\n') ; i++) {
-        //printf("[%d]", i);
-        returnableValue = putchar (str[i]);
-        //if (str[i] == '\n')
-            //printf("\n\n");
 
-        /*if (str[i] == '\n') {
-            printf("[%d]", n);
-            n++;
-        }*/
-    }
+    int returnableValue = 0;
+    for (int i = 0; (str[i] != '\0') && (str[i] != '\n') ; i++)
+        returnableValue = putchar (str[i]);
+
+    return returnableValue;
+}
+
+int myFputs(const char* str, FILE* file) {
+    assert (str);
+
+    int returnableValue = 0;
+    for (int i = 0; (str[i] != '\0') && (str[i] != '\n') ; i++)
+        returnableValue = fputc (str[i], file);
+
+    fputc('\n', file);
+
     return returnableValue;
 }
 

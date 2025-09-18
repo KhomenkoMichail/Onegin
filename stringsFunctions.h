@@ -3,6 +3,8 @@
 
 int myPuts(const char* str);
 
+int myFputs(const char* str, FILE* file);
+
 const char* myStrchr (const char* str, int searchedSymbol);
 
 size_t myStrlen (const char* str);

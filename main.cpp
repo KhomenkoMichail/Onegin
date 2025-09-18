@@ -6,7 +6,7 @@
 #include "stringsFunctions.h"
 #include "arrayFunctions.h"
 #include "arrOfStringsFunctions.h"
-#include "bestOneginReader.h"
+#include "structNovelFunctions.h"
 #include "textStructs.h"
 #include "sorts.h"
 
@@ -17,28 +17,14 @@ int main (void) {
 
     struct novel Onegin = {};
     getStructNovel2 (&Onegin,"Onegin.txt");
-/*
-    for(size_t i = 0; i < Onegin.numberOfStrings; i++){
-        printf("[%d] == (", i);
-        myPuts((Onegin.arrOfStringStructs[i]).ptrToString);
-        printf(") length == %d\n", (Onegin.arrOfStringStructs[i]).lengthOfString);
-    }
 
-    stringsBubbleSort(&Onegin, &myStrcmp3);
-    for(size_t i = 0; i < Onegin.numberOfStrings; i++){
-        printf("[%d] == (", i);
-        myPuts((Onegin.arrOfStringStructs[i]).ptrToString);
-        printf(") length == %d\n", (Onegin.arrOfStringStructs[i]).lengthOfString);
-    }
-*/
-    qsort(Onegin.arrOfStringStructs, Onegin.numberOfStrings, sizeof(struct line), &reversedMyStrcmp2);
+    FILE* file = fopen("result.txt", "w");
 
-    for(size_t i = 0; i < Onegin.numberOfStrings; i++){
-        printf("[%d] == (", i);
-        myPuts((Onegin.arrOfStringStructs[i]).ptrToString);
-        printf(") length == %d\n", (Onegin.arrOfStringStructs[i]).lengthOfString);
-    }
+    fwriteNovelAlphabetically(&Onegin, file);
+    fwriteNovelAlphabeticallyFromEnd(&Onegin, file);
+    fwriteNovelOriginal(Onegin, file);
 
+    fclose(file);
     free(Onegin.text);
     free(Onegin.arrOfStringStructs);
     return 0;

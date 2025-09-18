@@ -9,24 +9,18 @@
 #include "structNovelFunctions.h"
 #include "textStructs.h"
 #include "sorts.h"
-
+#include "helpingFunctions.h"
 
 
 int main (void) {
 
-
     struct novel Onegin = {};
-    getStructNovel2 (&Onegin,"Onegin.txt");
+    getStructNovel(&Onegin,"Onegin.txt");
 
-    FILE* file = fopen("result.txt", "w");
+    FILE* file = fillTheFile(&Onegin, "result.txt");
 
-    fwriteNovelAlphabetically(&Onegin, file);
-    fwriteNovelAlphabeticallyFromEnd(&Onegin, file);
-    fwriteNovelOriginal(Onegin, file);
+    supportEndOfProgram (&Onegin, file);
 
-    fclose(file);
-    free(Onegin.text);
-    free(Onegin.arrOfStringStructs);
     return 0;
 
 }

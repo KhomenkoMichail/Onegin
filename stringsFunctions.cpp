@@ -161,118 +161,6 @@ ssize_t myGetline(char** lineptr, size_t* n, FILE* file) {
     return charactersCount;
 }
 
-int myStrcmp(const char* str1, const char* str2) {
-    assert(str1);
-    assert(str2);
-
-    size_t numOfChar1  = 0;
-    size_t numOfChar2  = 0;
-
-    size_t sizeOfFirstStr  = myStrlen(str1) + 1;
-    size_t sizeOfSecondStr = myStrlen(str2) + 1;
-
-    while ((str1[numOfChar1] != '\0') && (str2[numOfChar2] != '\0') && (str1[numOfChar1] != '\n') && (str2[numOfChar2] != '\n')) {
-        while ((!isalpha(str1[numOfChar1])) && (str1[numOfChar1] != '\0') && (str1[numOfChar1] != '\n'))
-            numOfChar1++;
-
-        while ((!isalpha(str2[numOfChar2])) && (str2[numOfChar2] != '\0') && (str2[numOfChar2] != '\n'))
-            numOfChar2++;
-
-        if (tolower(str1[numOfChar1]) != tolower(str2[numOfChar2]))
-            return (tolower(str1[numOfChar1]) - tolower(str2[numOfChar2]));
-
-        if (numOfChar1 < (sizeOfFirstStr))
-            numOfChar1++;
-
-        if (numOfChar2 < (sizeOfSecondStr))
-            numOfChar2++;
-    }
-    return (tolower(str1[numOfChar1]) - tolower(str2[numOfChar2]));
-}
-
-int reversedMyStrcmp(const char* str1, const char* str2) {
-    assert(str1);
-    assert(str2);
-
-    size_t numOfChar1  = myStrlen(str1);
-    size_t numOfChar2  = myStrlen(str2);
-
-    while ((numOfChar1 != 0) && (numOfChar2 != 0)) {
-        while ((!isalpha(str1[numOfChar1])) && (numOfChar1 != 0))
-            numOfChar1--;
-
-        while ((!isalpha(str2[numOfChar2])) && (numOfChar2 != 0))
-            numOfChar2--;
-
-        if (tolower(str1[numOfChar1]) != tolower(str2[numOfChar2]))
-            return (tolower(str1[numOfChar1]) - tolower(str2[numOfChar2]));
-
-        if ((numOfChar1 > 0) && (numOfChar2 > 0))
-            numOfChar1--;
-            numOfChar2--;
-    }
-    if ((numOfChar1 == 0) && (numOfChar2 == 0))
-        return (tolower(str1[numOfChar1]) - tolower(str2[numOfChar2]));
-    if (numOfChar1 == 0)
-        return (tolower(str2[numOfChar2 - 1]));
-    if (numOfChar2 == 0)
-        return (tolower(str1[numOfChar1 - 1]));
-
-    assert ("Error in function reversedMyStrcmp" && 0);
-    return 0;
-}
-
-void swapStringContents(char* str1, char* str2) {
-    assert(str1);
-    assert(str2);
-
-    size_t sizeOfFirstStr  = myStrlen(str1) + 1;
-    size_t sizeOfSecondStr = myStrlen(str2) + 1;
-
-    char* memoryString = (char*)calloc(sizeOfFirstStr, sizeof(char));
-
-    for(size_t i = 0; i <= sizeOfFirstStr; i++)
-        memoryString[i] = str1[i];
-
-    for(size_t i = 0; i <= sizeOfFirstStr; i++)
-        str1[i] = '\0';
-    for(size_t i = 0; i <= sizeOfSecondStr; i++)
-        str1[i] = str2[i];
-
-    for(size_t i = 0; i <= sizeOfSecondStr; i++)
-        str2[i] = '\0';
-    for(size_t i = 0; i <= sizeOfFirstStr; i++)
-        str2[i] = memoryString[i];
-
-    free(memoryString);
-}
-
-int myStrcmp2 (const char* str1, const char* str2) {
-    assert(str1);
-    assert(str2);
-
-    const char* firstStringCharPtr  = str1;
-    const char* secondStringCharPtr  = str2;
-
-    size_t sizeOfFirstStr  = myStrlen(str1) + 1;
-    size_t sizeOfSecondStr = myStrlen(str2) + 1;
-
-    while ((*firstStringCharPtr != '\0') && (*secondStringCharPtr != '\0') && (*firstStringCharPtr != '\n') && (*secondStringCharPtr != '\n')) {
-        moveCharPointer(&firstStringCharPtr);
-        moveCharPointer(&secondStringCharPtr);
-
-        if (tolower(*firstStringCharPtr) != tolower(*secondStringCharPtr))
-            return (tolower(*firstStringCharPtr) - tolower(*secondStringCharPtr));
-
-        if (firstStringCharPtr < (str1 + sizeOfFirstStr))
-            firstStringCharPtr++;
-
-        if (secondStringCharPtr < (str2 + sizeOfSecondStr))
-            secondStringCharPtr++;
-    }
-    return (tolower(*firstStringCharPtr) - tolower(*secondStringCharPtr));
-}
-
 void moveCharPointer(const char** charPointer) {
     assert(charPointer);
 
@@ -280,7 +168,7 @@ void moveCharPointer(const char** charPointer) {
         (*charPointer)++;
 }
 
-void swapStringContents2(char* str1, char* str2) {
+void swapStringContents(char* str1, char* str2) {
     assert(str1);
     assert(str2);
 
@@ -303,7 +191,7 @@ void swapStringContents2(char* str1, char* str2) {
     str2[lengthOfStr2] = '\0';
 }
 
-int myStrcmp3 (const struct line str1, const struct line str2) {
+int myStrcmp(const struct line str1, const struct line str2) {
     assert(str1.ptrToString);
     assert(str2.ptrToString);
 
@@ -329,7 +217,7 @@ int myStrcmp3 (const struct line str1, const struct line str2) {
     return (tolower(*firstStringCharPtr) - tolower(*secondStringCharPtr));
 }
 
-int reversedMyStrcmp2(const void* str1, const void* str2) {
+int reversedMyStrcmp(const void* str1, const void* str2) {
     assert(str1);
     assert(str2);
 

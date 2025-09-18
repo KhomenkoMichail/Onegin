@@ -21,19 +21,12 @@ char* myStrdup(const char* str);
 
 ssize_t myGetline(char** lineptr, size_t* n, FILE* file);
 
-int myStrcmp(const char* str1, const char* str2);
-
-int reversedMyStrcmp(const char* str1, const char* str2);
-
-void swapStringContents(char* str1, char* str2);
-
-int myStrcmp2 (const char* str1, const char* str2);
-
-int myStrcmp3 (const struct line str1, const struct line str2);
+int myStrcmp(const struct line str1, const struct line str2);
 
 void moveCharPointer(const char** charPointer);
 
-void swapStringContents2(char* str1, char* str2);
+void swapStringContents(char* str1, char* str2);
 
-int reversedMyStrcmp2(const void* str1, const void* str2);
+int reversedMyStrcmp(const void* str1, const void* str2);
+
 #endif

@@ -10,10 +10,12 @@ sorts.o: sorts.cpp
 	g++ $(CFLAGS) -c sorts.cpp
 arrOfStringsFunctions.o: arrOfStringsFunctions.cpp
 	g++ $(CFLAGS) -c arrOfStringsFunctions.cpp
+helpingFunctions.o: helpingFunctions.cpp
+	g++ $(CFLAGS) -c helpingFunctions.cpp
 structNovelFunctions.o: structNovelFunctions.cpp
 	g++ $(CFLAGS) -c structNovelFunctions.cpp
-Strings.exe: main.o stringsFunctions.o arrayFunctions.o arrOfStringsFunctions.o structNovelFunctions.o sorts.o
-	g++ $(CFLAGS) stringsFunctions.o structNovelFunctions.o main.o arrayFunctions.o arrOfStringsFunctions.o sorts.o -o Strings
+Strings.exe: main.o stringsFunctions.o arrayFunctions.o arrOfStringsFunctions.o structNovelFunctions.o sorts.o helpingFunctions.o
+	g++ $(CFLAGS) stringsFunctions.o structNovelFunctions.o main.o arrayFunctions.o arrOfStringsFunctions.o sorts.o helpingFunctions.o -o Strings
 clean:
-	rm main.o stringsFunctions.o arrayFunctions.o arrOfStringsFunctions.o structNovelFunctions.o sorts.o
+	rm main.o stringsFunctions.o arrayFunctions.o arrOfStringsFunctions.o structNovelFunctions.o sorts.o helpingFunctions.o
 build: Strings.exe

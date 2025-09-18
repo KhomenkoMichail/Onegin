@@ -7045,3 +7045,393 @@ Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
 Directory:	C:\Users\Admin\Desktop\Strings
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0045C575 в функции getLengthOfStrings() в файле C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp на строке 148. Попытка прочесть данные по адресу 0x00000008 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005F1ADC (32-bit), Flags: Cmdre0, Thread: 0x2464 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0045C575 in C:\Users\Admin\Desktop\Strings\Strings.exe: getLengthOfStrings() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:148:
+
+    146: 
+    147:     for(size_t line = 0; line < structAddress->numberOfStrings - 1; line++)
+=>  148:         (structAddress->arrOfStringStructs[line]).lengthOfString = (size_t)((structAddress->arrOfStringStructs[line+1]).ptrToString - (structAddress->arrOfStringStructs[line]).ptrToString);
+    149: 
+    150:     (structAddress->arrOfStringStructs[structAddress->numberOfStrings - 1]).lengthOfString = myStrlen((structAddress->arrOfStringStructs[structAddress->numberOfStrings - 1]).ptrToString) + 1;
+
+# 1 0x0045C4DC in C:\Users\Admin\Desktop\Strings\Strings.exe: getArrOfStringStructs() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:140:
+
+    138:         }
+    139:     }
+=>  140:     getLengthOfStrings(structAddress);
+    141: 
+    142: }
+
+# 2 0x0045C3C1 in C:\Users\Admin\Desktop\Strings\Strings.exe: getStructNovel2() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:114:
+
+    112:     structAddress->numberOfStrings    = numberOfStrings;
+    113: 
+=>  114:     getArrOfStringStructs(structAddress);
+    115: 
+    116: }
+
+# 3 0x00489DF6 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:19:
+
+     17: 
+     18:     struct novel Onegin = {};
+=>   19:     getStructNovel2 (&Onegin,"OriginalOnegin.txt");
+     20: 
+     21:     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 18 2025 00:24:43, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 18 2025 00:24:52
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0045C575 в функции getLengthOfStrings() в файле C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp на строке 148. Попытка прочесть данные по адресу 0x00000008 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005F1ADC (32-bit), Flags: Cmdre0, Thread: 0x2464 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0045C575 in C:\Users\Admin\Desktop\Strings\Strings.exe: getLengthOfStrings() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:148:
+
+    146: 
+    147:     for(size_t line = 0; line < structAddress->numberOfStrings - 1; line++)
+=>  148:         (structAddress->arrOfStringStructs[line]).lengthOfString = (size_t)((structAddress->arrOfStringStructs[line+1]).ptrToString - (structAddress->arrOfStringStructs[line]).ptrToString);
+    149: 
+    150:     (structAddress->arrOfStringStructs[structAddress->numberOfStrings - 1]).lengthOfString = myStrlen((structAddress->arrOfStringStructs[structAddress->numberOfStrings - 1]).ptrToString) + 1;
+
+# 1 0x0045C4DC in C:\Users\Admin\Desktop\Strings\Strings.exe: getArrOfStringStructs() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:140:
+
+    138:         }
+    139:     }
+=>  140:     getLengthOfStrings(structAddress);
+    141: 
+    142: }
+
+# 2 0x0045C3C1 in C:\Users\Admin\Desktop\Strings\Strings.exe: getStructNovel2() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:114:
+
+    112:     structAddress->numberOfStrings    = numberOfStrings;
+    113: 
+=>  114:     getArrOfStringStructs(structAddress);
+    115: 
+    116: }
+
+# 3 0x00489DF6 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:19:
+
+     17: 
+     18:     struct novel Onegin = {};
+=>   19:     getStructNovel2 (&Onegin,"OriginalOnegin.txt");
+     20: 
+     21:     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 18 2025 00:24:43, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 18 2025 00:24:52
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0045C575 в функции getLengthOfStrings() в файле C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp на строке 147. Попытка прочесть данные по адресу 0x00000008 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005F1ADC (32-bit), Flags: Cmdre0, Thread: 0x3DA8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0045C575 in C:\Users\Admin\Desktop\Strings\Strings.exe: getLengthOfStrings() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:147:
+
+    145: 
+    146:     for(size_t line = 0; line < structAddress->numberOfStrings - 1; line++)
+=>  147:         (structAddress->arrOfStringStructs[line]).lengthOfString = (size_t)((structAddress->arrOfStringStructs[line+1]).ptrToString - (structAddress->arrOfStringStructs[line]).ptrToString);
+    148: 
+    149:     (structAddress->arrOfStringStructs[structAddress->numberOfStrings - 1]).lengthOfString = myStrlen((structAddress->arrOfStringStructs[structAddress->numberOfStrings - 1]).ptrToString) + 1;
+
+# 1 0x0045C4DC in C:\Users\Admin\Desktop\Strings\Strings.exe: getArrOfStringStructs() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:139:
+
+    137:         }
+    138:     }
+=>  139:     getLengthOfStrings(structAddress);
+    140: 
+    141: }
+
+# 2 0x0045C3C1 in C:\Users\Admin\Desktop\Strings\Strings.exe: getStructNovel2() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:114:
+
+    112:     structAddress->numberOfStrings    = numberOfStrings;
+    113: 
+=>  114:     getArrOfStringStructs(structAddress);
+    115: 
+    116: }
+
+# 3 0x00489DF6 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:19:
+
+     17: 
+     18:     struct novel Onegin = {};
+=>   19:     getStructNovel2 (&Onegin,"OriginalOnegin.txt");
+     20: 
+     21:     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 18 2025 00:36:04, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 18 2025 00:36:12
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0045C575 в функции getLengthOfStrings() в файле C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp на строке 147. Попытка прочесть данные по адресу 0x00000008 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005F1ADC (32-bit), Flags: Cmdre0, Thread: 0x3DA8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0045C575 in C:\Users\Admin\Desktop\Strings\Strings.exe: getLengthOfStrings() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:147:
+
+    145: 
+    146:     for(size_t line = 0; line < structAddress->numberOfStrings - 1; line++)
+=>  147:         (structAddress->arrOfStringStructs[line]).lengthOfString = (size_t)((structAddress->arrOfStringStructs[line+1]).ptrToString - (structAddress->arrOfStringStructs[line]).ptrToString);
+    148: 
+    149:     (structAddress->arrOfStringStructs[structAddress->numberOfStrings - 1]).lengthOfString = myStrlen((structAddress->arrOfStringStructs[structAddress->numberOfStrings - 1]).ptrToString) + 1;
+
+# 1 0x0045C4DC in C:\Users\Admin\Desktop\Strings\Strings.exe: getArrOfStringStructs() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:139:
+
+    137:         }
+    138:     }
+=>  139:     getLengthOfStrings(structAddress);
+    140: 
+    141: }
+
+# 2 0x0045C3C1 in C:\Users\Admin\Desktop\Strings\Strings.exe: getStructNovel2() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:114:
+
+    112:     structAddress->numberOfStrings    = numberOfStrings;
+    113: 
+=>  114:     getArrOfStringStructs(structAddress);
+    115: 
+    116: }
+
+# 3 0x00489DF6 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:19:
+
+     17: 
+     18:     struct novel Onegin = {};
+=>   19:     getStructNovel2 (&Onegin,"OriginalOnegin.txt");
+     20: 
+     21:     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 18 2025 00:36:04, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 18 2025 00:36:13
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0045C575 в функции getLengthOfStrings() в файле C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp на строке 147. Попытка прочесть данные по адресу 0x00000008 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005F1ADC (32-bit), Flags: Cmdre0, Thread: 0x3438 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0045C575 in C:\Users\Admin\Desktop\Strings\Strings.exe: getLengthOfStrings() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:147:
+
+    145: 
+    146:     for(size_t line = 0; line < structAddress->numberOfStrings - 1; line++)
+=>  147:         (structAddress->arrOfStringStructs[line]).lengthOfString = (size_t)((structAddress->arrOfStringStructs[line+1]).ptrToString - (structAddress->arrOfStringStructs[line]).ptrToString);
+    148: 
+    149:     (structAddress->arrOfStringStructs[structAddress->numberOfStrings - 1]).lengthOfString = myStrlen((structAddress->arrOfStringStructs[structAddress->numberOfStrings - 1]).ptrToString) + 1;
+
+# 1 0x0045C4DC in C:\Users\Admin\Desktop\Strings\Strings.exe: getArrOfStringStructs() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:139:
+
+    137:         }
+    138:     }
+=>  139:     getLengthOfStrings(structAddress);
+    140: 
+    141: }
+
+# 2 0x0045C3C1 in C:\Users\Admin\Desktop\Strings\Strings.exe: getStructNovel2() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:114:
+
+    112:     structAddress->numberOfStrings    = numberOfStrings;
+    113: 
+=>  114:     getArrOfStringStructs(structAddress);
+    115: 
+    116: }
+
+# 3 0x00489DF6 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:19:
+
+     17: 
+     18:     struct novel Onegin = {};
+=>   19:     getStructNovel2 (&Onegin,"OriginalOnegin.txt");
+     20: 
+     21:     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 18 2025 00:37:00, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 18 2025 00:37:08
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\Strings\Strings.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0045C575 в функции getLengthOfStrings() в файле C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp на строке 147. Попытка прочесть данные по адресу 0x00000008 в модуле C:\Users\Admin\Desktop\Strings\Strings.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005F1ADC (32-bit), Flags: Cmdre0, Thread: 0x3438 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0045C575 in C:\Users\Admin\Desktop\Strings\Strings.exe: getLengthOfStrings() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:147:
+
+    145: 
+    146:     for(size_t line = 0; line < structAddress->numberOfStrings - 1; line++)
+=>  147:         (structAddress->arrOfStringStructs[line]).lengthOfString = (size_t)((structAddress->arrOfStringStructs[line+1]).ptrToString - (structAddress->arrOfStringStructs[line]).ptrToString);
+    148: 
+    149:     (structAddress->arrOfStringStructs[structAddress->numberOfStrings - 1]).lengthOfString = myStrlen((structAddress->arrOfStringStructs[structAddress->numberOfStrings - 1]).ptrToString) + 1;
+
+# 1 0x0045C4DC in C:\Users\Admin\Desktop\Strings\Strings.exe: getArrOfStringStructs() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:139:
+
+    137:         }
+    138:     }
+=>  139:     getLengthOfStrings(structAddress);
+    140: 
+    141: }
+
+# 2 0x0045C3C1 in C:\Users\Admin\Desktop\Strings\Strings.exe: getStructNovel2() at C:/Users/Admin/Desktop/Strings/bestOneginReader.cpp:114:
+
+    112:     structAddress->numberOfStrings    = numberOfStrings;
+    113: 
+=>  114:     getArrOfStringStructs(structAddress);
+    115: 
+    116: }
+
+# 3 0x00489DF6 in C:\Users\Admin\Desktop\Strings\Strings.exe: main() at C:/Users/Admin/Desktop/Strings/main.cpp:19:
+
+     17: 
+     18:     struct novel Onegin = {};
+=>   19:     getStructNovel2 (&Onegin,"OriginalOnegin.txt");
+     20: 
+     21:     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\admin\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 18 2025 00:37:00, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 18 2025 00:37:08
+
+Run file:	C:\Users\Admin\Desktop\Strings\Strings.exe
+Directory:	C:\Users\Admin\Desktop\Strings
+
+--------------------------------------------------

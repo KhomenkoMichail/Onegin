@@ -121,7 +121,7 @@ void getArrOfStringStructs (struct novel* structAddress) {
     structAddress->arrOfStringStructs = (struct line*)calloc(structAddress->numberOfStrings, sizeof(struct line));
     size_t line = 0;
     (structAddress->arrOfStringStructs[line]).ptrToString = structAddress->text;
-    //(structAddress->arrOfStringStructs[line]).lengthOfString = myStrlen((structAddress->arrOfStringStructs[line]).ptrToString) + 1;
+    (structAddress->arrOfStringStructs[line]).lengthOfString = myStrlen((structAddress->arrOfStringStructs[line]).ptrToString) + 1;
     line++;
 
     size_t numOfCharInText = 0;

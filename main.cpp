@@ -16,7 +16,7 @@ int main (void) {
 
 
     struct novel Onegin = {};
-    getStructNovel2 (&Onegin,"OriginalOnegin.txt");
+    getStructNovel2 (&Onegin,"testOnegin.txt");
 
     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
         printf("[%d] == (", i);
@@ -24,16 +24,24 @@ int main (void) {
         printf(") length == %d\n", (Onegin.arrOfStringStructs[i]).lengthOfString);
     }
 
-/*    stringsBubbleSort(&Onegin, &reversedMyStrcmp);
+    stringsBubbleSort(&Onegin, &myStrcmp3);
     for(size_t i = 0; i < Onegin.numberOfStrings; i++){
         printf("[%d] == (", i);
-        myPuts(Onegin.arrOfPtrsToStrings[i]);
-        puts(")");
+        myPuts((Onegin.arrOfStringStructs[i]).ptrToString);
+        printf(") length == %d\n", (Onegin.arrOfStringStructs[i]).lengthOfString);
     }
+
+    qsort(Onegin.arrOfStringStructs, Onegin.numberOfStrings, sizeof(struct line), &reversedMyStrcmp2);
+
+    for(size_t i = 0; i < Onegin.numberOfStrings; i++){
+        printf("[%d] == (", i);
+        myPuts((Onegin.arrOfStringStructs[i]).ptrToString);
+        printf(") length == %d\n", (Onegin.arrOfStringStructs[i]).lengthOfString);
+    }
+
     free(Onegin.text);
-    free(Onegin.arrOfPtrsToStrings);
+    free(Onegin.arrOfStringStructs);
     return 0;
 
-*/
 }
 

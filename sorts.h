@@ -1,7 +1,7 @@
 #ifndef SORTS_H
 #define SORTS_H
 
-typedef int (*comparefunc_t)(const char* str1, const char* str2);
+typedef int (*comparefunc_t)(struct line str1, struct line str2);
 
 void intBubbleSort (int* arr, size_t sizeOfArr);
 

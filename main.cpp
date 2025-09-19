@@ -13,15 +13,12 @@
 
 
 int main (void) {
-
     struct novel Onegin = {};
     getStructNovel(&Onegin,"Onegin.txt");
 
-    FILE* file = fillTheFile(&Onegin, "result.txt");
+    fillTheFile(&Onegin, "result.txt");
 
-    supportEndOfProgram (&Onegin, file);
-
+    freeStruct(&Onegin);
     return 0;
-
 }
 

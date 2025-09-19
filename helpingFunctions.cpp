@@ -10,12 +10,8 @@
 #include "structNovelFunctions.h"
 #include "textStructs.h"
 
-void supportEndOfProgram (struct novel* structAddress, FILE* file) {
+void freeStruct (struct novel* structAddress) {
     assert(structAddress);
-    assert(file);
-
-    if (fclose(file) != 0)
-        perror("Error of getting the size of the file");
 
     free(structAddress->text);
     free(structAddress->arrOfStringStructs);
@@ -42,7 +38,7 @@ size_t getNumberOfSymbols (char* text, char searchedSymbol) {
     return numOfSymbolsFound;
 }
 
-FILE* fillTheFile (struct novel* structAddress, const char* nameOfFile) {
+void fillTheFile (struct novel* structAddress, const char* nameOfFile) {
     assert(structAddress);
     assert(nameOfFile);
 
@@ -50,14 +46,18 @@ FILE* fillTheFile (struct novel* structAddress, const char* nameOfFile) {
     if (file == NULL) {
         fprintf(stderr, "Error of opening file \"%s\"", nameOfFile);
         perror("");
-        return NULL;
+        return;
     }
 
     fwriteNovelAlphabetically(structAddress, file);
     fwriteNovelAlphabeticallyFromEnd(structAddress, file);
     fwriteNovelOriginal(*structAddress, file);
 
-    return file;
+    if (fclose(file) != 0) {
+        fprintf(stderr, "Error of closing file \"%s\"", nameOfFile);
+        perror("");
+    }
+
 }
 
 
